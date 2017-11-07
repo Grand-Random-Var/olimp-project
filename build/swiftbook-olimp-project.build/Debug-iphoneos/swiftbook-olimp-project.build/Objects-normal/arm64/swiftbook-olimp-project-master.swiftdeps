@@ -1,0 +1,6 @@
+version: "Apple Swift version 4.0 (swiftlang-900.0.65.2 clang-900.0.37)"
+options: "cde633b7e3b795eeb0e4f14acd16b7d5"
+build_time: [1510081261, 524492000]
+inputs:
+  "/Users/kalugin/Documents/GitHub/olimp-project/swiftbook-olimp-project/ViewController.swift": [1510081255, 0]
+  "/Users/kalugin/Documents/GitHub/olimp-project/swiftbook-olimp-project/AppDelegate.swift": [1510081086, 0]
