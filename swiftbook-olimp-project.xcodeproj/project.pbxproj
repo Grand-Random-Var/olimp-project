@@ -1,0 +1,344 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EDBC61531FB22E1800A05899 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBC61521FB22E1800A05899 /* AppDelegate.swift */; };
+		EDBC61551FB22E1800A05899 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBC61541FB22E1800A05899 /* ViewController.swift */; };
+		EDBC61581FB22E1800A05899 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDBC61561FB22E1800A05899 /* Main.storyboard */; };
+		EDBC615B1FB22E1800A05899 /* swiftbook_olimp_project.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EDBC61591FB22E1800A05899 /* swiftbook_olimp_project.xcdatamodeld */; };
+		EDBC615D1FB22E1800A05899 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDBC615C1FB22E1800A05899 /* Assets.xcassets */; };
+		EDBC61601FB22E1800A05899 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDBC615E1FB22E1800A05899 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EDBC614F1FB22E1800A05899 /* swiftbook-olimp-project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swiftbook-olimp-project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDBC61521FB22E1800A05899 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EDBC61541FB22E1800A05899 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EDBC61571FB22E1800A05899 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EDBC615A1FB22E1800A05899 /* swiftbook_olimp_project.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = swiftbook_olimp_project.xcdatamodel; sourceTree = "<group>"; };
+		EDBC615C1FB22E1800A05899 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EDBC615F1FB22E1800A05899 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EDBC61611FB22E1800A05899 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EDBC614C1FB22E1800A05899 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EDBC61461FB22E1800A05899 = {
+			isa = PBXGroup;
+			children = (
+				EDBC61511FB22E1800A05899 /* swiftbook-olimp-project */,
+				EDBC61501FB22E1800A05899 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EDBC61501FB22E1800A05899 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EDBC614F1FB22E1800A05899 /* swiftbook-olimp-project.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EDBC61511FB22E1800A05899 /* swiftbook-olimp-project */ = {
+			isa = PBXGroup;
+			children = (
+				EDBC61521FB22E1800A05899 /* AppDelegate.swift */,
+				EDBC61541FB22E1800A05899 /* ViewController.swift */,
+				EDBC61561FB22E1800A05899 /* Main.storyboard */,
+				EDBC615C1FB22E1800A05899 /* Assets.xcassets */,
+				EDBC615E1FB22E1800A05899 /* LaunchScreen.storyboard */,
+				EDBC61611FB22E1800A05899 /* Info.plist */,
+				EDBC61591FB22E1800A05899 /* swiftbook_olimp_project.xcdatamodeld */,
+			);
+			path = "swiftbook-olimp-project";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EDBC614E1FB22E1800A05899 /* swiftbook-olimp-project */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EDBC61641FB22E1800A05899 /* Build configuration list for PBXNativeTarget "swiftbook-olimp-project" */;
+			buildPhases = (
+				EDBC614B1FB22E1800A05899 /* Sources */,
+				EDBC614C1FB22E1800A05899 /* Frameworks */,
+				EDBC614D1FB22E1800A05899 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "swiftbook-olimp-project";
+			productName = "swiftbook-olimp-project";
+			productReference = EDBC614F1FB22E1800A05899 /* swiftbook-olimp-project.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EDBC61471FB22E1800A05899 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0910;
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = "Gleb Kalachev";
+				TargetAttributes = {
+					EDBC614E1FB22E1800A05899 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = EDBC614A1FB22E1800A05899 /* Build configuration list for PBXProject "swiftbook-olimp-project" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EDBC61461FB22E1800A05899;
+			productRefGroup = EDBC61501FB22E1800A05899 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EDBC614E1FB22E1800A05899 /* swiftbook-olimp-project */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EDBC614D1FB22E1800A05899 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDBC61601FB22E1800A05899 /* LaunchScreen.storyboard in Resources */,
+				EDBC615D1FB22E1800A05899 /* Assets.xcassets in Resources */,
+				EDBC61581FB22E1800A05899 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EDBC614B1FB22E1800A05899 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDBC61551FB22E1800A05899 /* ViewController.swift in Sources */,
+				EDBC61531FB22E1800A05899 /* AppDelegate.swift in Sources */,
+				EDBC615B1FB22E1800A05899 /* swiftbook_olimp_project.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EDBC61561FB22E1800A05899 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EDBC61571FB22E1800A05899 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EDBC615E1FB22E1800A05899 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EDBC615F1FB22E1800A05899 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EDBC61621FB22E1800A05899 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EDBC61631FB22E1800A05899 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EDBC61651FB22E1800A05899 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6WBATSU6B5;
+				INFOPLIST_FILE = "swiftbook-olimp-project/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "GGhost.swiftbook-olimp-project";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EDBC61661FB22E1800A05899 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6WBATSU6B5;
+				INFOPLIST_FILE = "swiftbook-olimp-project/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "GGhost.swiftbook-olimp-project";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EDBC614A1FB22E1800A05899 /* Build configuration list for PBXProject "swiftbook-olimp-project" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDBC61621FB22E1800A05899 /* Debug */,
+				EDBC61631FB22E1800A05899 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EDBC61641FB22E1800A05899 /* Build configuration list for PBXNativeTarget "swiftbook-olimp-project" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDBC61651FB22E1800A05899 /* Debug */,
+				EDBC61661FB22E1800A05899 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EDBC61591FB22E1800A05899 /* swiftbook_olimp_project.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EDBC615A1FB22E1800A05899 /* swiftbook_olimp_project.xcdatamodel */,
+			);
+			currentVersion = EDBC615A1FB22E1800A05899 /* swiftbook_olimp_project.xcdatamodel */;
+			path = swiftbook_olimp_project.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = EDBC61471FB22E1800A05899 /* Project object */;
+}
