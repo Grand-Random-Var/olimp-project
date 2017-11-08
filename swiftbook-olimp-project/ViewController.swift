@@ -9,25 +9,21 @@
 import UIKit
 
 class ViewController: UIViewController {
-    //tetstetste
+
+    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var button: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        print("test1")
-        //dentest
         
-        //denCommit
+        
         
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func action(sender: UIButton) {
+        label.text = textField.text
     }
-    
     
 }
 
-//glebtest
-//GLEB_AS_TEAM_TEST
-//gleb want this line to be such
