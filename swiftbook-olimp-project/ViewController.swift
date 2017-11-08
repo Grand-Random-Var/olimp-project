@@ -9,17 +9,24 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-   override func viewDidLoad() {
-      super.viewDidLoad()
-      // Do any additional setup after loading the view, typically from a nib.
-   }
-
-   override func didReceiveMemoryWarning() {
-      super.didReceiveMemoryWarning()
-      // Dispose of any resources that can be recreated.
-   }
-
-
+    //tetstetste
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+        print("test1")
+        //dentest
+        
+        //denCommit
+        
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    
 }
 
+//glebtest
+//GLEB_AS_TEAM_TEST
