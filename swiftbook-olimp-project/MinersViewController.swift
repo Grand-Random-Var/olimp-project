@@ -16,5 +16,41 @@ class MinersViewController: UIViewController {
    
    @IBOutlet weak var tableView: UITableView!
    
+   override func viewDidLoad() {
+      
+      
+//      let m = Miner.init(name: "видеокарта", farmChange: 10, image: UIImage.init()) { () -> Void in
+//         
+//         let clickCount = UserDefaults.standard.value(forKey: "clickCount") as! Int
+//         
+//         if clickCount >= 40 {
+//            
+//            UserDefaults.standard.setValue(UserDefaults.standard.integer(forKey: "energy") - 1, forKey: "energy")
+//            
+//            
+//         }
+//         
+//         UserDefaults.standard.setValue(0, forKey: "clickCount")
+//         
+//      }
+//      
+//      let n = Miner.init(name: "видеокарта", farmChange: 10, image: UIImage.init()) { () -> Void in
+//         
+//         let clickCount = UserDefaults.standard.value(forKey: "clickCount") as! Int
+//         
+//         if clickCount >= 40 {
+//            
+//            UserDefaults.standard.setValue(UserDefaults.standard.integer(forKey: "energy") - 1, forKey: "energy")
+//            
+//            
+//         }
+//         
+//         UserDefaults.standard.setValue(0, forKey: "clickCount")
+//         
+//      }
+      
+      
+      
+   }
    
 }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+
+		ED126B1E1FB64E8F00A876E2 /* UserDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED126B1D1FB64E8F00A876E2 /* UserDataModel.swift */; };
 		1FE0A1991FB654B50072DB33 /* UserDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE0A1981FB654B50072DB33 /* UserDataManager.swift */; };
 		EDA544A11FB64998005276E5 /* FarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA544A01FB64998005276E5 /* FarmViewController.swift */; };
 		EDA544A31FB649AD005276E5 /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA544A21FB649AD005276E5 /* ShopViewController.swift */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+
+		ED126B1D1FB64E8F00A876E2 /* UserDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataModel.swift; sourceTree = "<group>"; };
 		1FE0A1981FB654B50072DB33 /* UserDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataManager.swift; sourceTree = "<group>"; };
 		EDA544A01FB64998005276E5 /* FarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmViewController.swift; sourceTree = "<group>"; };
 		EDA544A21FB649AD005276E5 /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +78,7 @@
 				EDA544A21FB649AD005276E5 /* ShopViewController.swift */,
 				EDA544A61FB64A8E005276E5 /* ShopItemCollectionViewCell.swift */,
 				EDBC61561FB22E1800A05899 /* Main.storyboard */,
+				ED126B1D1FB64E8F00A876E2 /* UserDataModel.swift */,
 				EDBC615C1FB22E1800A05899 /* Assets.xcassets */,
 				EDBC615E1FB22E1800A05899 /* LaunchScreen.storyboard */,
 				EDBC61611FB22E1800A05899 /* Info.plist */,
@@ -154,6 +159,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED126B1E1FB64E8F00A876E2 /* UserDataModel.swift in Sources */,
 				EDA544A11FB64998005276E5 /* FarmViewController.swift in Sources */,
 				EDBC61551FB22E1800A05899 /* MinersViewController.swift in Sources */,
 				EDA544A71FB64A8E005276E5 /* ShopItemCollectionViewCell.swift in Sources */,
