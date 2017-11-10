@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+
 		ED126B1E1FB64E8F00A876E2 /* UserDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED126B1D1FB64E8F00A876E2 /* UserDataModel.swift */; };
+		1FE0A1991FB654B50072DB33 /* UserDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE0A1981FB654B50072DB33 /* UserDataManager.swift */; };
 		EDA544A11FB64998005276E5 /* FarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA544A01FB64998005276E5 /* FarmViewController.swift */; };
 		EDA544A31FB649AD005276E5 /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA544A21FB649AD005276E5 /* ShopViewController.swift */; };
 		EDA544A51FB64A6F005276E5 /* MinerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA544A41FB64A6F005276E5 /* MinerTableViewCell.swift */; };
@@ -21,7 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+
 		ED126B1D1FB64E8F00A876E2 /* UserDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataModel.swift; sourceTree = "<group>"; };
+		1FE0A1981FB654B50072DB33 /* UserDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataManager.swift; sourceTree = "<group>"; };
 		EDA544A01FB64998005276E5 /* FarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmViewController.swift; sourceTree = "<group>"; };
 		EDA544A21FB649AD005276E5 /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
 		EDA544A41FB64A6F005276E5 /* MinerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinerTableViewCell.swift; sourceTree = "<group>"; };
@@ -66,6 +70,7 @@
 		EDBC61511FB22E1800A05899 /* swiftbook-olimp-project */ = {
 			isa = PBXGroup;
 			children = (
+				1FE0A1981FB654B50072DB33 /* UserDataManager.swift */,
 				EDBC61521FB22E1800A05899 /* AppDelegate.swift */,
 				EDBC61541FB22E1800A05899 /* MinersViewController.swift */,
 				EDA544A41FB64A6F005276E5 /* MinerTableViewCell.swift */,
@@ -161,6 +166,7 @@
 				EDA544A31FB649AD005276E5 /* ShopViewController.swift in Sources */,
 				EDA544A51FB64A6F005276E5 /* MinerTableViewCell.swift in Sources */,
 				EDBC61531FB22E1800A05899 /* AppDelegate.swift in Sources */,
+				1FE0A1991FB654B50072DB33 /* UserDataManager.swift in Sources */,
 				EDBC615B1FB22E1800A05899 /* swiftbook_olimp_project.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
