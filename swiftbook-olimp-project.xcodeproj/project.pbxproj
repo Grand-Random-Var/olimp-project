@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1BC6402D2026C67FDA75AE41 /* Pods_swiftbook_olimp_project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C46B81A45227E1774ED5B0E /* Pods_swiftbook_olimp_project.framework */; };
+		EDA544A11FB64998005276E5 /* FarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA544A01FB64998005276E5 /* FarmViewController.swift */; };
+		EDA544A31FB649AD005276E5 /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA544A21FB649AD005276E5 /* ShopViewController.swift */; };
+		EDA544A51FB64A6F005276E5 /* MinerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA544A41FB64A6F005276E5 /* MinerTableViewCell.swift */; };
+		EDA544A71FB64A8E005276E5 /* ShopItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA544A61FB64A8E005276E5 /* ShopItemCollectionViewCell.swift */; };
 		EDBC61531FB22E1800A05899 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBC61521FB22E1800A05899 /* AppDelegate.swift */; };
-		EDBC61551FB22E1800A05899 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBC61541FB22E1800A05899 /* ViewController.swift */; };
+		EDBC61551FB22E1800A05899 /* MinersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBC61541FB22E1800A05899 /* MinersViewController.swift */; };
 		EDBC61581FB22E1800A05899 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDBC61561FB22E1800A05899 /* Main.storyboard */; };
 		EDBC615B1FB22E1800A05899 /* swiftbook_olimp_project.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EDBC61591FB22E1800A05899 /* swiftbook_olimp_project.xcdatamodeld */; };
 		EDBC615D1FB22E1800A05899 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDBC615C1FB22E1800A05899 /* Assets.xcassets */; };
@@ -17,12 +20,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5CB3B9D0E97877F2C1273180 /* Pods-swiftbook-olimp-project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftbook-olimp-project.debug.xcconfig"; path = "Pods/Target Support Files/Pods-swiftbook-olimp-project/Pods-swiftbook-olimp-project.debug.xcconfig"; sourceTree = "<group>"; };
-		9C46B81A45227E1774ED5B0E /* Pods_swiftbook_olimp_project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swiftbook_olimp_project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DFDD1E1F1CD0621417B192F7 /* Pods-swiftbook-olimp-project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftbook-olimp-project.release.xcconfig"; path = "Pods/Target Support Files/Pods-swiftbook-olimp-project/Pods-swiftbook-olimp-project.release.xcconfig"; sourceTree = "<group>"; };
+		EDA544A01FB64998005276E5 /* FarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmViewController.swift; sourceTree = "<group>"; };
+		EDA544A21FB649AD005276E5 /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
+		EDA544A41FB64A6F005276E5 /* MinerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinerTableViewCell.swift; sourceTree = "<group>"; };
+		EDA544A61FB64A8E005276E5 /* ShopItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		EDBC614F1FB22E1800A05899 /* swiftbook-olimp-project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swiftbook-olimp-project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDBC61521FB22E1800A05899 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EDBC61541FB22E1800A05899 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EDBC61541FB22E1800A05899 /* MinersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinersViewController.swift; sourceTree = "<group>"; };
 		EDBC61571FB22E1800A05899 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EDBC615A1FB22E1800A05899 /* swiftbook_olimp_project.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = swiftbook_olimp_project.xcdatamodel; sourceTree = "<group>"; };
 		EDBC615C1FB22E1800A05899 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -35,29 +39,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1BC6402D2026C67FDA75AE41 /* Pods_swiftbook_olimp_project.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		62E17E60B070C0B8B38D5FA8 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				5CB3B9D0E97877F2C1273180 /* Pods-swiftbook-olimp-project.debug.xcconfig */,
-				DFDD1E1F1CD0621417B192F7 /* Pods-swiftbook-olimp-project.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		EDBC61461FB22E1800A05899 = {
 			isa = PBXGroup;
 			children = (
 				EDBC61511FB22E1800A05899 /* swiftbook-olimp-project */,
 				EDBC61501FB22E1800A05899 /* Products */,
-				62E17E60B070C0B8B38D5FA8 /* Pods */,
-				FC1CF1CE9D156509C58FC3E9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,7 +65,11 @@
 			isa = PBXGroup;
 			children = (
 				EDBC61521FB22E1800A05899 /* AppDelegate.swift */,
-				EDBC61541FB22E1800A05899 /* ViewController.swift */,
+				EDBC61541FB22E1800A05899 /* MinersViewController.swift */,
+				EDA544A41FB64A6F005276E5 /* MinerTableViewCell.swift */,
+				EDA544A01FB64998005276E5 /* FarmViewController.swift */,
+				EDA544A21FB649AD005276E5 /* ShopViewController.swift */,
+				EDA544A61FB64A8E005276E5 /* ShopItemCollectionViewCell.swift */,
 				EDBC61561FB22E1800A05899 /* Main.storyboard */,
 				EDBC615C1FB22E1800A05899 /* Assets.xcassets */,
 				EDBC615E1FB22E1800A05899 /* LaunchScreen.storyboard */,
@@ -83,14 +79,6 @@
 			path = "swiftbook-olimp-project";
 			sourceTree = "<group>";
 		};
-		FC1CF1CE9D156509C58FC3E9 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				9C46B81A45227E1774ED5B0E /* Pods_swiftbook_olimp_project.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -98,12 +86,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EDBC61641FB22E1800A05899 /* Build configuration list for PBXNativeTarget "swiftbook-olimp-project" */;
 			buildPhases = (
-				C58BD54E5BFAFDB17B865274 /* [CP] Check Pods Manifest.lock */,
 				EDBC614B1FB22E1800A05899 /* Sources */,
 				EDBC614C1FB22E1800A05899 /* Frameworks */,
 				EDBC614D1FB22E1800A05899 /* Resources */,
-				EA96225A7736207E6F1C85A4 /* [CP] Embed Pods Frameworks */,
-				5659C971A0AD952CBAA38BEF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -161,76 +146,16 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		5659C971A0AD952CBAA38BEF /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-swiftbook-olimp-project/Pods-swiftbook-olimp-project-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C58BD54E5BFAFDB17B865274 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-swiftbook-olimp-project-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EA96225A7736207E6F1C85A4 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-swiftbook-olimp-project/Pods-swiftbook-olimp-project-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
-				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
-				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
-				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-swiftbook-olimp-project/Pods-swiftbook-olimp-project-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		EDBC614B1FB22E1800A05899 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDBC61551FB22E1800A05899 /* ViewController.swift in Sources */,
+				EDA544A11FB64998005276E5 /* FarmViewController.swift in Sources */,
+				EDBC61551FB22E1800A05899 /* MinersViewController.swift in Sources */,
+				EDA544A71FB64A8E005276E5 /* ShopItemCollectionViewCell.swift in Sources */,
+				EDA544A31FB649AD005276E5 /* ShopViewController.swift in Sources */,
+				EDA544A51FB64A6F005276E5 /* MinerTableViewCell.swift in Sources */,
 				EDBC61531FB22E1800A05899 /* AppDelegate.swift in Sources */,
 				EDBC615B1FB22E1800A05899 /* swiftbook_olimp_project.xcdatamodeld in Sources */,
 			);
@@ -367,7 +292,6 @@
 		};
 		EDBC61651FB22E1800A05899 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5CB3B9D0E97877F2C1273180 /* Pods-swiftbook-olimp-project.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -383,7 +307,6 @@
 		};
 		EDBC61661FB22E1800A05899 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DFDD1E1F1CD0621417B192F7 /* Pods-swiftbook-olimp-project.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
