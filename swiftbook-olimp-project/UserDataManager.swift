@@ -17,7 +17,7 @@ class UserDataManager {
         let defaults = UserDefaults.standard
         
         swiftCoins = defaults.integer(forKey: "swiftCoins")
-        if let energy = defaults.value(forKey: "energy") as Int {
+        if let energy = defaults.value(forKey: "energy") as? Int {
             self.energy = energy
         }else{
             self.energy = 30
