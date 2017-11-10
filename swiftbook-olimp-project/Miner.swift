@@ -37,7 +37,11 @@ class Miner {
       
    }
    
-   
+    func performMining() -> Bool {
+        let random = arc4random_uniform(10) + 1
+        if random < farmChange { return true }
+        return false
+    }
    
    
 }
