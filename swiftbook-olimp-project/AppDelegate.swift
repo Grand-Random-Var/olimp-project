@@ -16,7 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-      // Override point for customization after application launch.
+      
+      //Эта строчка для того, чтобы при запуске по дефолту выбирался центральный viewController с кликами
+      (window!.rootViewController as! UITabBarController).selectedIndex = 1
+      
       return true
    }
 
