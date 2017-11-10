@@ -27,10 +27,10 @@ class Miner {
    var enegryConsumeClosure: () -> Void
    
    //Полный инициализатор
-   init(name: String, farmChange: Int, image: UIImage, enegryConsumeLogic: @escaping () -> Void) {
+   init(name: String, farmChance: Int, image: UIImage, enegryConsumeLogic: @escaping () -> Void) {
       
       self.name = name
-      self.farmChange = farmChange
+      self.farmChange = farmChance
       self.image = image
       self.enegryConsumeClosure = enegryConsumeLogic
       

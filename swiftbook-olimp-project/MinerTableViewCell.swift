@@ -9,10 +9,15 @@
 import UIKit
 
 class MinerTableViewCell: UITableViewCell {
-   
-   
-   @IBOutlet weak var theImageView: UIImageView!
-   
-   @IBOutlet weak var theLabel: UILabel!
-   
+    
+    
+    @IBOutlet weak var theImageView: UIImageView!
+    
+    @IBOutlet weak var theLabel: UILabel!
+    
+    func setup(withMiner miner: Miner) {
+        self.theImageView.image = miner.image
+        self.theLabel.text = miner.name
+    }
+    
 }
