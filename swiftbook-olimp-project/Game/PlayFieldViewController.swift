@@ -16,8 +16,13 @@ class PlayFieldViewController: UIViewController {
     
     
     //Outlets
+    
     @IBOutlet var tileButtons: [UIButton]!
     
+    
+    
+    @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var lifeLabel: UILabel!
     //Label для разговора с игроком
     @IBOutlet weak var interactiveLabel: UILabel!
     
@@ -49,7 +54,8 @@ class PlayFieldViewController: UIViewController {
             }
         }
     }
-    var currentScore: Int = 0
+    var score: Int = 0
+    var life: Int = 3
     //
     var task: [Int] = []
     //Zero-based индекс текущего хода
@@ -59,12 +65,16 @@ class PlayFieldViewController: UIViewController {
     
     override func viewDidLoad() {
         
+        
+        print("settings: \(dataManager.settings)")
+        print("score per win with dur: \(scorePerWin(withSettings: dataManager.settings))")
+        
         for tile in self.tileButtons {
             tile.alpha = dimAlphaConstant
             tile.setTitle("", for: .normal)
             
             tile.layer.borderColor = UIColor.white.cgColor
-            tile.layer.borderWidth = 2
+            tile.layer.borderWidth = 3
             
             tile.addTarget(self, action: #selector(self.aTileTouchDownInside(sender:)), for: .touchDown)
             tile.addTarget(self, action: #selector(self.aTileTouchUpInside(sender:)), for: .touchUpInside)
@@ -73,6 +83,9 @@ class PlayFieldViewController: UIViewController {
         
         self.dimAndShowStart()
         
+        
+        self.scoreLabel.text = "0"
+        self.lifeLabel.text = "3"
         self.interactiveLabel.text = ""
         
     }
@@ -87,27 +100,37 @@ class PlayFieldViewController: UIViewController {
         
         
         //Если совпало
-        print("task.count: \(task.count)")
+        print("task before comparing: \(self.task)")
         print("currentStep: \(currentStep)")
+        
         if sender.tag == self.task[currentStep] {
             
-            defer {
-                currentStep += 1
-            }
+//            defer {
+//                currentStep += 1
+//            }
             
             //Если это был последний отгаданный квадратик
             if currentStep == dataManager.settings.numberOfBlinks-1 {
                 //Выигрыш раунда!
-                sender.blink(withColor: rightTileTappedColor, animationDucation: blinkAnimationDurationOnTap)
+                sender.highlight(withColor: rightTileTappedColor, animationDuration: blinkAnimationDurationOnTap)
+                
+                //В данном кейсе прибавлять currentStep не нужно
+                
+                self.win()
                 
             } else {
                 //продолжаем смотреть
-                sender.blink(withColor: rightTileTappedColor, animationDucation: blinkAnimationDurationOnTap)
+                sender.highlight(withColor: rightTileTappedColor, animationDuration: blinkAnimationDurationOnTap)
+                
+                //Так как не последний, то нужно вести счетчик
+                currentStep += 1
             }
             
         } else {
             //не совпало
-            sender.blink(withColor: wrongTileTappedColor, animationDucation: blinkAnimationDurationOnTap)
+            sender.highlight(withColor: wrongTileTappedColor, animationDuration: blinkAnimationDurationOnTap)
+            sender.superview?.superview?.vibrate()
+            self.lose()
         }
         
     }
@@ -122,7 +145,8 @@ class PlayFieldViewController: UIViewController {
     private func playCombination(numberOfSteps: Int, blinkDuration: TimeInterval) {
         
         //Обновление даты
-        self.task = []
+//        self.task = []
+        self.gameStatus = .isShowingCombination
         
         var count = 0
         
@@ -135,7 +159,7 @@ class PlayFieldViewController: UIViewController {
             
             self.task.append(randomValue)
             
-            self.tileButtons[randomValue-1].blink(withColor: defaultTileColor) {
+            self.tileButtons[randomValue-1].highlight(withColor: defaultTileColor, animationDuration: dataManager.settings.blinkDuration) {
                 count += 1
                 
                 print("before comparing count = \(count)")
@@ -160,11 +184,14 @@ class PlayFieldViewController: UIViewController {
     
     
     
-    @IBAction func testButtonTapped(_ sender: UIView) {
+    @IBAction func reloadButtonTapped(_ sender: UIView) {
         
-        //        self.playCombination(numberOfSteps: 5, speed: 0)
-        dimAndShowStart()
+        self.win()
         
+        
+        
+//        dimAndShowStart()
+//        self.gameStatus = .isStopped
         
     }
     
@@ -182,7 +209,7 @@ class PlayFieldViewController: UIViewController {
     
     private func dimAndShowStart() {
         
-        self.gameStatus = .isStopped
+        self.gameStatus = .isShowingCombination
         
         dimView = UIView.init(frame: self.view.frame)
         dimView.backgroundColor = .black
@@ -192,7 +219,7 @@ class PlayFieldViewController: UIViewController {
         startButton = UIButton.init()
         startButton.frame.size = CGSize.init(width: dimView.frame.size.width * 0.74, height: 54)
         startButton.center = dimView.center
-        startButton.setTitle("Start", for: .normal)
+        startButton.setTitle("Старт!", for: .normal)
         startButton.titleLabel!.font = startButton.titleLabel!.font.withSize(24)
         startButton.backgroundColor = #colorLiteral(red: 0.9583352208, green: 0.8847941756, blue: 0.2802580595, alpha: 1)
         startButton.alpha = 0.3
@@ -228,14 +255,7 @@ class PlayFieldViewController: UIViewController {
             self.dimView.isHidden = true
         }
         
-        self.interactiveLabel.text = "Запомните комбинацию"
-        
-        self.timerDelayBeforePlayingCombination?.invalidate()
-        
-        self.timerDelayBeforePlayingCombination = Timer.scheduledTimer(withTimeInterval: 2, repeats: false, block: { (timer) in
-            self.playCombination(numberOfSteps: 5, blinkDuration: 0.1)
-        })
-        
+        self.startNewRound()
     }
     
     
@@ -252,10 +272,45 @@ class PlayFieldViewController: UIViewController {
 //    }
     
     
+    private func win() {
+        
+        //косметическая часть
+        self.score += scorePerWin(withSettings: dataManager.settings)
+        self.scoreLabel.text = "\(self.score)"
+        self.scoreLabel.highlightWithScale()
+        
+        
+        //логическая часть
+        self.startNewRound()
+        
+    }
+    
+    private func lose() {
+        
+        //Если теряется не последняя жизнь 
+        if self.life > 1 {
+            self.life -= 1
+            self.lifeLabel.text = "\(self.life)"
+            self.lifeLabel.highlightWithScale()
+            
+            self.startNewRound()
+            
+        }
+    }
+    
     //Используется при проигрыше или выигрыше
-    private func prepareForNewRound() {
+    private func startNewRound() {
+        
+        self.gameStatus = .isStopped
+        
         self.task = []
         self.currentStep = 0
+        self.interactiveLabel.text = "Запомните комбинацию"
+        
+        self.timerDelayBeforePlayingCombination?.invalidate()
+        self.timerDelayBeforePlayingCombination = Timer.scheduledTimer(withTimeInterval: delayBeforePlayingCombination, repeats: false, block: { (timer) in
+            self.playCombination(withSettings: dataManager.settings)
+        })
     }
     
     private func disableTiles() {

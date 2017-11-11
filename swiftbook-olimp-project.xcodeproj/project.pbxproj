@@ -12,7 +12,7 @@
 		1FE0A1991FB654B50072DB33 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE0A1981FB654B50072DB33 /* DataManager.swift */; };
 		ED6579781FB6F6710027313B /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6579761FB6F6700027313B /* RoundedButton.swift */; };
 		ED6579791FB6F6710027313B /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6579771FB6F6700027313B /* RoundedView.swift */; };
-		ED65797C1FB6F9940027313B /* Button+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED65797B1FB6F9940027313B /* Button+Animations.swift */; };
+		ED65797C1FB6F9940027313B /* UIView+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED65797B1FB6F9940027313B /* UIView+Animations.swift */; };
 		ED65797E1FB703AF0027313B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED65797D1FB703AF0027313B /* SettingsViewController.swift */; };
 		ED6579801FB703D70027313B /* RecordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED65797F1FB703D70027313B /* RecordsViewController.swift */; };
 		EDA544A11FB64998005276E5 /* PlayFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA544A01FB64998005276E5 /* PlayFieldViewController.swift */; };
@@ -30,7 +30,7 @@
 		1FE0A1981FB654B50072DB33 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		ED6579761FB6F6700027313B /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		ED6579771FB6F6700027313B /* RoundedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
-		ED65797B1FB6F9940027313B /* Button+Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+Animations.swift"; sourceTree = "<group>"; };
+		ED65797B1FB6F9940027313B /* UIView+Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Animations.swift"; sourceTree = "<group>"; };
 		ED65797D1FB703AF0027313B /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		ED65797F1FB703D70027313B /* RecordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsViewController.swift; sourceTree = "<group>"; };
 		EDA544A01FB64998005276E5 /* PlayFieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayFieldViewController.swift; sourceTree = "<group>"; };
@@ -76,7 +76,7 @@
 		1F405A3F1FB73B1E00FA5EA1 /* extensions */ = {
 			isa = PBXGroup;
 			children = (
-				ED65797B1FB6F9940027313B /* Button+Animations.swift */,
+				ED65797B1FB6F9940027313B /* UIView+Animations.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -208,7 +208,7 @@
 			files = (
 				ED6579801FB703D70027313B /* RecordsViewController.swift in Sources */,
 				EDA544A11FB64998005276E5 /* PlayFieldViewController.swift in Sources */,
-				ED65797C1FB6F9940027313B /* Button+Animations.swift in Sources */,
+				ED65797C1FB6F9940027313B /* UIView+Animations.swift in Sources */,
 				1F405A3E1FB7220E00FA5EA1 /* StartViewController.swift in Sources */,
 				ED65797E1FB703AF0027313B /* SettingsViewController.swift in Sources */,
 				ED6579781FB6F6710027313B /* RoundedButton.swift in Sources */,

@@ -81,7 +81,8 @@ class DataManager {
     private init() {
         
         //Установка стандарных настроек
-        self.settings = Settings.init(withNumberOfBlinks: 5, blinkDuration: 0.5)
+        print("asdf ", defaultSettings.numberOfBlinks)
+        self.settings = Settings.init(withNumberOfBlinks: defaultSettings.numberOfBlinks, blinkDuration: 0.4)
         
         if UserDefaults.standard.value(forKey: DataKeys.records) as? [Record] == nil {
             UserDefaults.standard.set(Array<Record>(), forKey: DataKeys.records)
