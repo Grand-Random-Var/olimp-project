@@ -62,6 +62,7 @@ class FarmViewController: UIViewController {
     
     @objc private func setMiner() {
         self.miner = dataManager.miners[dataManager.lastUsedMinerIndex]
+        print("lastUsed index: \(dataManager.lastUsedMinerIndex)")
         self.minerImageView.image = miner.image
     }
     

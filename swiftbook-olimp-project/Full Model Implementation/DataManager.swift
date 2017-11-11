@@ -21,7 +21,7 @@ class DataManager {
     var swiftcoins: Int = 0  {didSet{ UserDefaults.standard.set(swiftcoins, forKey: "swiftCoins") }}
     var energy: Int = 0 {didSet{ UserDefaults.standard.set(energy, forKey: "energy") }}
     var clickCount: Int = 0 {didSet{ UserDefaults.standard.set(clickCount, forKey: "clickCount") }}
-    var lastUsedMinerIndex: Int = 0 {didSet {UserDefaults.standard.set(lastUsedMinerIndex, forKey: "lastUsedMinderIndex")}}
+    var lastUsedMinerIndex: Int = 0 {didSet {UserDefaults.standard.set(lastUsedMinerIndex, forKey: "lastUsedMinerIndex")}}
     
     private init() {
         
@@ -31,7 +31,6 @@ class DataManager {
         //Извлечение или первая установка свойств
         self.swiftcoins = UserDefaults.standard.integer(forKey: "swiftCoins")
         
-        
 //        if let energy = UserDefaults.standard.value(forKey: "energy") as? Int {
 //            self.energy = energy
 //        }else{
@@ -40,9 +39,9 @@ class DataManager {
         //перефразировал вышезакоменченный код в более сжатом формате
         self.energy = (UserDefaults.standard.value(forKey: "enegry") as? Int) ?? 30
         
-        
-        
         self.clickCount = UserDefaults.standard.integer(forKey: "clickCount")
+        
+        self.lastUsedMinerIndex = UserDefaults.standard.value(forKey: "lastUsedMinerIndex") as? Int ?? 0
         
         //ВАЖНО: метод setMiners() должен исполняться после установки свойств 
         self.setMiners()
