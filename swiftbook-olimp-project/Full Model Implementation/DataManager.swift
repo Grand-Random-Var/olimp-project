@@ -72,6 +72,8 @@ class DataManager {
     
     static var shared = DataManager.init()
     
+    private let maxRecordsCount = 10
+    
     private init() {
         
         //Установка стандарных настроек
@@ -85,6 +87,24 @@ class DataManager {
         
     }
     
+    //Функция, автоматически вставляющая рекорд на надлежащее место
+    func setRecord(_ recordValue: Int) {
+        
+        let newRecord = Record(value: recordValue, name: "test")
+        var records = self.records
+        records.append(newRecord)
+        
+        records = records.sorted { (current, next) -> Bool in
+            return current.value > next.value
+        }
+        
+        for _ in 0 ... records.count - maxRecordsCount - 1 {
+            records.remove(at: records.count - 1)
+        }
+        
+        UserDefaults.standard.set(records, forKey: DataKeys.records)
+        
+    }
     
     //Функция определяет, является ли набранный счет рекордным
     func isRecord(_ value: Int) -> Bool {
@@ -92,15 +112,7 @@ class DataManager {
         
         
         
-        return true 
+        return true
     }
-    
-    
-    //Функция, автоматически вставляющая рекорд на надлежащее место
-    func setRecord(_ recordValue: Int) {
-        
-    }
-    
-    
     
 }

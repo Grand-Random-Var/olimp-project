@@ -11,6 +11,13 @@ import UIKit
 
 class RecordsViewController: UIViewController {
     
+    let dataManager = DataManager.shared
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        
+        
+    }
     
 }
