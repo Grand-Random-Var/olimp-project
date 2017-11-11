@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1FE0A1991FB654B50072DB33 /* UserDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE0A1981FB654B50072DB33 /* UserDataManager.swift */; };
+		1FE0A1991FB654B50072DB33 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE0A1981FB654B50072DB33 /* DataManager.swift */; };
 		ED126B1E1FB64E8F00A876E2 /* Miner.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED126B1D1FB64E8F00A876E2 /* Miner.swift */; };
 		EDA544A11FB64998005276E5 /* FarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA544A01FB64998005276E5 /* FarmViewController.swift */; };
 		EDA544A31FB649AD005276E5 /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA544A21FB649AD005276E5 /* ShopViewController.swift */; };
 		EDA544A51FB64A6F005276E5 /* MinerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA544A41FB64A6F005276E5 /* MinerTableViewCell.swift */; };
 		EDA544A71FB64A8E005276E5 /* ShopItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA544A61FB64A8E005276E5 /* ShopItemCollectionViewCell.swift */; };
+		EDAC3A951FB6779200888ED6 /* Global Variables.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAC3A941FB6779200888ED6 /* Global Variables.swift */; };
 		EDBC61531FB22E1800A05899 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBC61521FB22E1800A05899 /* AppDelegate.swift */; };
 		EDBC61551FB22E1800A05899 /* MinersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBC61541FB22E1800A05899 /* MinersViewController.swift */; };
 		EDBC61581FB22E1800A05899 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDBC61561FB22E1800A05899 /* Main.storyboard */; };
@@ -22,12 +23,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1FE0A1981FB654B50072DB33 /* UserDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataManager.swift; sourceTree = "<group>"; };
+		1FE0A1981FB654B50072DB33 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		ED126B1D1FB64E8F00A876E2 /* Miner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Miner.swift; sourceTree = "<group>"; };
 		EDA544A01FB64998005276E5 /* FarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmViewController.swift; sourceTree = "<group>"; };
 		EDA544A21FB649AD005276E5 /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
 		EDA544A41FB64A6F005276E5 /* MinerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinerTableViewCell.swift; sourceTree = "<group>"; };
 		EDA544A61FB64A8E005276E5 /* ShopItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopItemCollectionViewCell.swift; sourceTree = "<group>"; };
+		EDAC3A941FB6779200888ED6 /* Global Variables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Global Variables.swift"; sourceTree = "<group>"; };
 		EDBC614F1FB22E1800A05899 /* swiftbook-olimp-project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swiftbook-olimp-project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDBC61521FB22E1800A05899 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDBC61541FB22E1800A05899 /* MinersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinersViewController.swift; sourceTree = "<group>"; };
@@ -49,12 +51,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1FE0A19A1FB660BB0072DB33 /* FarmViewController */ = {
+		1FE0A19A1FB660BB0072DB33 /* Farm Scene */ = {
 			isa = PBXGroup;
 			children = (
 				EDA544A01FB64998005276E5 /* FarmViewController.swift */,
 			);
-			path = FarmViewController;
+			path = "Farm Scene";
+			sourceTree = "<group>";
+		};
+		EDAC3A911FB6724E00888ED6 /* Miners Scene */ = {
+			isa = PBXGroup;
+			children = (
+				EDBC61541FB22E1800A05899 /* MinersViewController.swift */,
+				EDA544A41FB64A6F005276E5 /* MinerTableViewCell.swift */,
+			);
+			path = "Miners Scene";
+			sourceTree = "<group>";
+		};
+		EDAC3A921FB6726F00888ED6 /* Shop Scene */ = {
+			isa = PBXGroup;
+			children = (
+				EDA544A21FB649AD005276E5 /* ShopViewController.swift */,
+				EDA544A61FB64A8E005276E5 /* ShopItemCollectionViewCell.swift */,
+			);
+			path = "Shop Scene";
+			sourceTree = "<group>";
+		};
+		EDAC3A931FB676D200888ED6 /* Full Model Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				EDAC3A941FB6779200888ED6 /* Global Variables.swift */,
+				1FE0A1981FB654B50072DB33 /* DataManager.swift */,
+				ED126B1D1FB64E8F00A876E2 /* Miner.swift */,
+			);
+			path = "Full Model Implementation";
 			sourceTree = "<group>";
 		};
 		EDBC61461FB22E1800A05899 = {
@@ -76,15 +106,12 @@
 		EDBC61511FB22E1800A05899 /* swiftbook-olimp-project */ = {
 			isa = PBXGroup;
 			children = (
-				1FE0A1981FB654B50072DB33 /* UserDataManager.swift */,
 				EDBC61521FB22E1800A05899 /* AppDelegate.swift */,
-				EDBC61541FB22E1800A05899 /* MinersViewController.swift */,
-				EDA544A41FB64A6F005276E5 /* MinerTableViewCell.swift */,
-				1FE0A19A1FB660BB0072DB33 /* FarmViewController */,
-				EDA544A21FB649AD005276E5 /* ShopViewController.swift */,
-				EDA544A61FB64A8E005276E5 /* ShopItemCollectionViewCell.swift */,
+				EDAC3A911FB6724E00888ED6 /* Miners Scene */,
+				1FE0A19A1FB660BB0072DB33 /* Farm Scene */,
+				EDAC3A921FB6726F00888ED6 /* Shop Scene */,
 				EDBC61561FB22E1800A05899 /* Main.storyboard */,
-				ED126B1D1FB64E8F00A876E2 /* Miner.swift */,
+				EDAC3A931FB676D200888ED6 /* Full Model Implementation */,
 				EDBC615C1FB22E1800A05899 /* Assets.xcassets */,
 				EDBC615E1FB22E1800A05899 /* LaunchScreen.storyboard */,
 				EDBC61611FB22E1800A05899 /* Info.plist */,
@@ -172,7 +199,8 @@
 				EDA544A31FB649AD005276E5 /* ShopViewController.swift in Sources */,
 				EDA544A51FB64A6F005276E5 /* MinerTableViewCell.swift in Sources */,
 				EDBC61531FB22E1800A05899 /* AppDelegate.swift in Sources */,
-				1FE0A1991FB654B50072DB33 /* UserDataManager.swift in Sources */,
+				EDAC3A951FB6779200888ED6 /* Global Variables.swift in Sources */,
+				1FE0A1991FB654B50072DB33 /* DataManager.swift in Sources */,
 				EDBC615B1FB22E1800A05899 /* swiftbook_olimp_project.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
