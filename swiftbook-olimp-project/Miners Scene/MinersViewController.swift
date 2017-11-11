@@ -20,6 +20,8 @@ class MinersViewController: UIViewController, UITableViewDataSource, UITableView
     
     override func viewDidLoad() {
         
+//        dataManager = DataManager.shared
+        
         //Устанавливаем массив miners
         
         self.tableView.delegate = self
@@ -30,7 +32,7 @@ class MinersViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.setIndicators()
+        self.updateIndicators()
     }
     
     //MARK: UITableViewDataSource implementation
@@ -59,20 +61,73 @@ class MinersViewController: UIViewController, UITableViewDataSource, UITableView
     //MARK: UITableViewDelegate implementation
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        self.tableView.deselectRow(at: indexPath, animated: false)
-        
-        //Перенёс установку checkmark'a в cellForRowAtIndexPath метод
-//        self.tableView.cellForRow(at: indexPath)!.accessoryType = .checkmark
-        
-        //Сохранение последнего используемого майнера
-        dataManager.lastUsedMinerIndex = indexPath.row
-        
-        //Посылаю уведомление о том, что поменял машину. За этим уведомлением будет наболюдать FarmViewController
-        NotificationCenter.default.post(name: NSNotification.Name.init("minerChanged"), object: nil)
-        
-        //Обновлять checkmark буду с помощью простого reloadData
-        self.tableView.reloadData()
+        //Если не куплен...
+        if !dataManager.miners[indexPath.row].isBought {
+            
+            let minerToBuy = dataManager.miners[indexPath.row]
+            
+            //И если хватает денег, то выскакивет AlertController...
+            if dataManager.swiftcoins >= minerToBuy.price {
+                //...предлагающий купить майнер
+                let ac = UIAlertController.init(title: "Покупка", message: "Купить \(minerToBuy.name) за \(minerToBuy.price) свифткоинов?", preferredStyle: UIAlertControllerStyle.alert)
+                ac.addAction(UIAlertAction.init(title: "Отмена", style: UIAlertActionStyle.cancel, handler: {(action) in 
+                    //убрать выделение cell'a
+                    self.tableView.deselectRow(at: indexPath, animated: true)
+                }))
+                ac.addAction(UIAlertAction.init(title: "Купить", style: .default, handler: { (action) in
+                    
+                    
+                    //Алгоритм покупки:
+                    minerToBuy.isBought = true
+                    dataManager.swiftcoins -= minerToBuy.price
+                    
+                    //выбор купленного майнера
+                    dataManager.lastUsedMinerIndex = indexPath.row
+                    
+                    //Посылаю уведомление о том, что поменял майнер. За этим уведомлением будет наболюдать FarmViewController
+                    NotificationCenter.default.post(name: NSNotification.Name.init("minerChanged"), object: nil)
+                    
+                    //Из-за метода reloadData анимация метода deselectRow может не сработать
+                    self.tableView.deselectRow(at: indexPath, animated: true)
+                    
+                    self.tableView.beginUpdates()
+                    self.tableView.reloadData()
+                    self.tableView.endUpdates()
+                    //и тоже убрать выделение cell'a
+                }))
+                
+                self.present(ac, animated: true, completion: nil)
+                
+            } else {
+                //...а в противном случае сообщающий, что недостаточно денег для покупки
+                
+                let ac = UIAlertController.init(title: nil, message: "Не хватает свифткоинов для покупки", preferredStyle: .alert)
+                ac.addAction(UIAlertAction.init(title: "Пойду майнить!", style: .default, handler: { (action) in 
+                    //убрать выделение cell'a
+                    self.tableView.deselectRow(at: indexPath, animated: true)
+                }))
+                
+                
+                self.present(ac, animated: true, completion: nil)
+                
+            }
+            
+            
+        } else {
+            //в противном случае просто меняем miner'a
+            self.tableView.deselectRow(at: indexPath, animated: true)
+            
+            dataManager.lastUsedMinerIndex = indexPath.row
+            
+            //Посылаю уведомление о том, что поменял майнер. За этим уведомлением будет наболюдать FarmViewController
+            NotificationCenter.default.post(name: NSNotification.Name.init("minerChanged"), object: nil)
+            
+            
+            self.tableView.beginUpdates()
+            self.tableView.reloadData()
+            self.tableView.endUpdates()
+            
+        }
         
     }
     
@@ -80,7 +135,7 @@ class MinersViewController: UIViewController, UITableViewDataSource, UITableView
     //MARK: Custom functions
     
     //Установка и обновление label'ов индикаторов
-    private func setIndicators() {
+    private func updateIndicators() {
         swiftcoinsCountLabel.text = "свифткоины: \(dataManager.swiftcoins)"
         energyCountLabel.text = "энергия: \(dataManager.energy)"
     }

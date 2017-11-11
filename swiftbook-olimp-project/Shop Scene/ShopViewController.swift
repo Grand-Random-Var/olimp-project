@@ -16,12 +16,12 @@ class ShopViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewWillAppear(_ animated: Bool) {
-        self.setIndicators()
+        self.updateIndicators()
     }
     
     
     //Установка и обновление label'ов индикаторов
-    private func setIndicators() {
+    private func updateIndicators() {
         swiftcoinsCountLabel.text = "свифткоины: \(dataManager.swiftcoins)"
         energyCountLabel.text = "энергия: \(dataManager.energy)"
     }

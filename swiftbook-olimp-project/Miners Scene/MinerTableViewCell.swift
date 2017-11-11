@@ -23,6 +23,9 @@ class MinerTableViewCell: UITableViewCell {
     func setup(withMiner miner: Miner) {
         self.theImageView.image = miner.image
         self.nameLabel.text = miner.name
+        //FIXIT: miner.pureFarmChance нужно будет изменить, когда в программу доабвлю бафы
+        self.farmChanceLabel.text = "farm chance: \(miner.pureFarmChance /*временная строчка*/)"
+        self.priceAndStatusLabel.text = "price: \(miner.price) \(miner.isBought ? "(куплен)" : "")"
     }
     
 }

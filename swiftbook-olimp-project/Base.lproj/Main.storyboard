@@ -161,16 +161,25 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NVH-Do-gOg">
+                                <rect key="frame" x="0.0" y="307.5" width="320" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="hZT-wD-wnX" firstAttribute="bottom" secondItem="R76-PL-Syt" secondAttribute="bottom" id="2ic-fV-8w1"/>
                             <constraint firstItem="Bgg-5O-mth" firstAttribute="centerX" secondItem="Hb6-Ug-a7t" secondAttribute="centerX" id="4pr-aW-4vy"/>
                             <constraint firstItem="R76-PL-Syt" firstAttribute="width" secondItem="Hb6-Ug-a7t" secondAttribute="width" id="FaX-RK-xqd"/>
+                            <constraint firstItem="NVH-Do-gOg" firstAttribute="top" secondItem="IYw-BD-9aq" secondAttribute="bottom" constant="12" id="KYc-k9-zKe"/>
                             <constraint firstItem="R76-PL-Syt" firstAttribute="centerX" secondItem="hZT-wD-wnX" secondAttribute="centerX" id="Mr3-pe-aq4"/>
                             <constraint firstItem="R76-PL-Syt" firstAttribute="top" secondItem="IYw-BD-9aq" secondAttribute="bottom" constant="80" id="Pdl-3e-oef"/>
+                            <constraint firstItem="NVH-Do-gOg" firstAttribute="width" secondItem="Hb6-Ug-a7t" secondAttribute="width" id="W72-u6-aVg"/>
                             <constraint firstItem="IYw-BD-9aq" firstAttribute="centerY" secondItem="hZT-wD-wnX" secondAttribute="centerY" multiplier="0.8" id="Ytj-mV-G7t"/>
                             <constraint firstItem="Bgg-5O-mth" firstAttribute="top" secondItem="hZT-wD-wnX" secondAttribute="top" constant="4" id="elP-0q-sab"/>
+                            <constraint firstItem="NVH-Do-gOg" firstAttribute="centerX" secondItem="IYw-BD-9aq" secondAttribute="centerX" id="iFU-fp-ObZ"/>
                             <constraint firstItem="IYw-BD-9aq" firstAttribute="width" secondItem="Hb6-Ug-a7t" secondAttribute="width" multiplier="0.5" id="r3F-Jn-9MU"/>
                             <constraint firstItem="IYw-BD-9aq" firstAttribute="centerX" secondItem="hZT-wD-wnX" secondAttribute="centerX" id="vBi-eE-p7G"/>
                         </constraints>
@@ -181,6 +190,7 @@
                         <outlet property="energyCountLabel" destination="C1i-sq-G34" id="Nva-YB-JgZ"/>
                         <outlet property="farmButton" destination="R76-PL-Syt" id="lTZ-2H-F3x"/>
                         <outlet property="minerImageView" destination="IYw-BD-9aq" id="LlC-EL-aSs"/>
+                        <outlet property="minerNameLabel" destination="NVH-Do-gOg" id="94q-jt-5oe"/>
                         <outlet property="swiftcoinsCountLabel" destination="ciw-33-vfi" id="LcL-5s-ikx"/>
                     </connections>
                 </viewController>
@@ -281,7 +291,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VQ8-6A-IIk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="315" y="507.04225352112678"/>
+            <point key="canvasLocation" x="420" y="575"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="aln-Lc-1dX">
@@ -300,7 +310,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2cJ-vx-vST" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-945" y="9"/>
+            <point key="canvasLocation" x="-718" y="-249"/>
         </scene>
     </scenes>
 </document>
