@@ -18,8 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         //Эта строчка для того, чтобы при запуске по дефолту выбирался центральный viewController с кликами
-        (window!.rootViewController as! UITabBarController).selectedIndex = 1
+        (window!.rootViewController as? UITabBarController)?.selectedIndex = 1
         
+//        (window!.rootViewController as! UITabBarController).tabBar.tintColor = UIColor.white
         
         return true
     }

@@ -11,6 +11,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="ArialBold.ttf">
+            <string>Arial-BoldMT</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Item-->
         <scene sceneID="5s1-6f-8YM">
@@ -19,7 +24,7 @@
                     <view key="view" contentMode="scaleToFill" id="7Jk-Gj-6Wf">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.19595640897750854" green="0.19613614678382874" blue="0.19598421454429626" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="hEE-fY-ngy"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="Oyz-qH-6gi"/>
@@ -28,7 +33,7 @@
             </objects>
             <point key="canvasLocation" x="336" y="-965"/>
         </scene>
-        <!--Фарм-->
+        <!--Игра-->
         <scene sceneID="eQV-OR-Yhm">
             <objects>
                 <viewController id="pMx-5P-B6f" customClass="PlayFieldViewController" customModule="swiftbook_olimp_project" customModuleProvider="target" sceneMemberID="viewController">
@@ -36,14 +41,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="baa-Dv-BWC">
-                                <rect key="frame" x="10" y="146.5" width="300" height="300"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="baa-Dv-BWC">
+                                <rect key="frame" x="16" y="179.5" width="288" height="287.5"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="55e-sh-Xho">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="93.5"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="55e-sh-Xho">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="85"/>
                                         <subviews>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oao-Yd-gh9" customClass="RoundedButton" customModule="swiftbook_olimp_project" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="93.5" height="93.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="85.5" height="85"/>
                                                 <color key="backgroundColor" red="0.84843069314956665" green="0.84556788206100464" blue="0.84852796792984009" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="oao-Yd-gh9" secondAttribute="height" id="376-wJ-jUg"/>
@@ -59,7 +64,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RMT-cm-ssl" customClass="RoundedButton" customModule="swiftbook_olimp_project" customModuleProvider="target">
-                                                <rect key="frame" x="103.5" y="0.0" width="93" height="93.5"/>
+                                                <rect key="frame" x="101.5" y="0.0" width="85" height="85"/>
                                                 <color key="backgroundColor" red="0.84843069309999997" green="0.8455678821" blue="0.84852796789999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="RMT-cm-ssl" secondAttribute="height" id="6mS-E8-q60"/>
@@ -75,7 +80,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L0i-I4-BGI" customClass="RoundedButton" customModule="swiftbook_olimp_project" customModuleProvider="target">
-                                                <rect key="frame" x="206.5" y="0.0" width="93.5" height="93.5"/>
+                                                <rect key="frame" x="202.5" y="0.0" width="85.5" height="85"/>
                                                 <color key="backgroundColor" red="0.84843069309999997" green="0.8455678821" blue="0.84852796789999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="L0i-I4-BGI" secondAttribute="height" id="l1O-e8-NA7"/>
@@ -97,11 +102,11 @@
                                             <constraint firstItem="L0i-I4-BGI" firstAttribute="width" secondItem="L0i-I4-BGI" secondAttribute="height" id="sGf-V0-u8d"/>
                                         </constraints>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="mIG-iG-vX9">
-                                        <rect key="frame" x="0.0" y="103.5" width="300" height="93"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="mIG-iG-vX9">
+                                        <rect key="frame" x="0.0" y="101" width="288" height="85"/>
                                         <subviews>
                                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xCf-dC-7Sa" customClass="RoundedButton" customModule="swiftbook_olimp_project" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="93.5" height="93"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="85.5" height="85"/>
                                                 <color key="backgroundColor" red="0.84843069309999997" green="0.8455678821" blue="0.84852796789999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="xCf-dC-7Sa" secondAttribute="height" id="Mes-Ev-agd"/>
@@ -117,7 +122,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fRY-Ww-Q2K" customClass="RoundedButton" customModule="swiftbook_olimp_project" customModuleProvider="target">
-                                                <rect key="frame" x="103.5" y="0.0" width="93" height="93"/>
+                                                <rect key="frame" x="101.5" y="0.0" width="85" height="85"/>
                                                 <color key="backgroundColor" red="0.84843069309999997" green="0.8455678821" blue="0.84852796789999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="fRY-Ww-Q2K" secondAttribute="height" id="jl8-8C-6fx"/>
@@ -133,7 +138,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PuM-0h-I3X" customClass="RoundedButton" customModule="swiftbook_olimp_project" customModuleProvider="target">
-                                                <rect key="frame" x="206.5" y="0.0" width="93.5" height="93"/>
+                                                <rect key="frame" x="202.5" y="0.0" width="85.5" height="85"/>
                                                 <color key="backgroundColor" red="0.84843069309999997" green="0.8455678821" blue="0.84852796789999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="PuM-0h-I3X" secondAttribute="height" id="xgy-Ni-J9T"/>
@@ -155,11 +160,11 @@
                                             <constraint firstItem="PuM-0h-I3X" firstAttribute="width" secondItem="PuM-0h-I3X" secondAttribute="height" id="rov-sH-kA5"/>
                                         </constraints>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7n2-lB-bgD">
-                                        <rect key="frame" x="0.0" y="206.5" width="300" height="93.5"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="7n2-lB-bgD">
+                                        <rect key="frame" x="0.0" y="202" width="288" height="85.5"/>
                                         <subviews>
                                             <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q5f-Oa-stA" customClass="RoundedButton" customModule="swiftbook_olimp_project" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="93.5" height="93.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="85.5" height="85.5"/>
                                                 <color key="backgroundColor" red="0.84843069309999997" green="0.8455678821" blue="0.84852796789999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Q5f-Oa-stA" secondAttribute="height" id="wA7-MA-o41"/>
@@ -175,7 +180,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TsP-9c-k3g" customClass="RoundedButton" customModule="swiftbook_olimp_project" customModuleProvider="target">
-                                                <rect key="frame" x="103.5" y="0.0" width="93" height="93.5"/>
+                                                <rect key="frame" x="101.5" y="0.0" width="85.5" height="85.5"/>
                                                 <color key="backgroundColor" red="0.84843069309999997" green="0.8455678821" blue="0.84852796789999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="TsP-9c-k3g" secondAttribute="height" id="pd6-PW-dhn"/>
@@ -191,7 +196,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zkf-0a-ovb" customClass="RoundedButton" customModule="swiftbook_olimp_project" customModuleProvider="target">
-                                                <rect key="frame" x="206.5" y="0.0" width="93.5" height="93.5"/>
+                                                <rect key="frame" x="203" y="0.0" width="85" height="85.5"/>
                                                 <color key="backgroundColor" red="0.84843069309999997" green="0.8455678821" blue="0.84852796789999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Zkf-0a-ovb" secondAttribute="height" id="QvQ-nf-Dp8"/>
@@ -215,40 +220,172 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KHW-e1-rle">
-                                <rect key="frame" x="286" y="20" width="30" height="30"/>
-                                <state key="normal" title="test"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пример текста" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fPi-mS-9dG">
+                                <rect key="frame" x="0.0" y="141" width="320" height="22.5"/>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="20"/>
+                                <color key="textColor" red="0.99019607843137258" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Y7d-9F-LNg">
+                                <rect key="frame" x="16" y="20" width="248" height="40"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="swiftcoin_score" translatesAutoresizingMaskIntoConstraints="NO" id="Fcf-Nw-wgn">
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Fcf-Nw-wgn" secondAttribute="height" id="OM0-uC-Ycu"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Score" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UNM-pc-aGW">
+                                        <rect key="frame" x="48" y="0.0" width="60" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="uPX-lg-ygl"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="20"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="754" verticalCompressionResistancePriority="755" text="49" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5TT-BH-8As">
+                                        <rect key="frame" x="116" y="0.0" width="33.5" height="40"/>
+                                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="30"/>
+                                        <color key="textColor" red="0.96173650026321411" green="0.90209370851516724" blue="0.31493848562240601" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" horizontalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="5sL-tz-0WN">
+                                        <rect key="frame" x="157.5" y="0.0" width="90.5" height="40"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="FbP-Jh-dQk"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="BvY-DK-q3v">
+                                <rect key="frame" x="16" y="60" width="248" height="40"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="AFW-rL-vBa">
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="AFW-rL-vBa" secondAttribute="height" id="oXv-bj-QtX"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Life" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hYr-u4-gxD">
+                                        <rect key="frame" x="48" y="0.0" width="60" height="40"/>
+                                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="20"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MPZ-EO-7bf">
+                                        <rect key="frame" x="116" y="0.0" width="17" height="40"/>
+                                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="30"/>
+                                        <color key="textColor" red="0.86920922994613647" green="0.34755381941795349" blue="0.25016844272613525" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" horizontalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="zd4-cu-xkU">
+                                        <rect key="frame" x="141" y="0.0" width="107" height="40"/>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WRm-aI-CMW">
+                                <rect key="frame" x="264" y="36" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="MUF-xM-lNk"/>
+                                    <constraint firstAttribute="width" secondItem="WRm-aI-CMW" secondAttribute="height" multiplier="1:1" id="U2T-DX-asl"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="reload"/>
                                 <connections>
-                                    <action selector="testButtonTapped:" destination="pMx-5P-B6f" eventType="touchUpInside" id="ldZ-Cg-rQL"/>
+                                    <action selector="reloadButtonTapped:" destination="pMx-5P-B6f" eventType="touchUpInside" id="CBi-fU-FrW"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.19595640897750854" green="0.19613614678382874" blue="0.19598421454429626" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="hZT-wD-wnX" firstAttribute="trailing" secondItem="KHW-e1-rle" secondAttribute="trailing" constant="4" id="NAK-vY-6t2"/>
-                            <constraint firstItem="baa-Dv-BWC" firstAttribute="centerY" secondItem="hZT-wD-wnX" secondAttribute="centerY" multiplier="1.1" id="d3P-Pv-WgM"/>
+                            <constraint firstItem="fPi-mS-9dG" firstAttribute="centerX" secondItem="hZT-wD-wnX" secondAttribute="centerX" id="4S3-tN-Uco"/>
+                            <constraint firstItem="BvY-DK-q3v" firstAttribute="leading" secondItem="Y7d-9F-LNg" secondAttribute="leading" id="65Y-Bm-bhJ"/>
+                            <constraint firstItem="55e-sh-Xho" firstAttribute="top" secondItem="fPi-mS-9dG" secondAttribute="bottom" constant="16" id="6ro-Bu-Foa"/>
+                            <constraint firstItem="UNM-pc-aGW" firstAttribute="width" secondItem="hYr-u4-gxD" secondAttribute="width" id="EXh-uz-Dcw"/>
+                            <constraint firstItem="WRm-aI-CMW" firstAttribute="leading" secondItem="BvY-DK-q3v" secondAttribute="trailing" id="IIX-un-UQ1"/>
+                            <constraint firstItem="Y7d-9F-LNg" firstAttribute="leading" secondItem="hZT-wD-wnX" secondAttribute="leading" constant="16" id="Ke2-9X-qlM"/>
+                            <constraint firstItem="hZT-wD-wnX" firstAttribute="trailing" secondItem="WRm-aI-CMW" secondAttribute="trailing" constant="16" id="Zkj-Yv-UyI"/>
+                            <constraint firstItem="baa-Dv-BWC" firstAttribute="centerY" secondItem="hZT-wD-wnX" secondAttribute="centerY" multiplier="1.2" id="d3P-Pv-WgM"/>
                             <constraint firstItem="baa-Dv-BWC" firstAttribute="centerX" secondItem="hZT-wD-wnX" secondAttribute="centerX" id="eTL-wI-1z3"/>
-                            <constraint firstItem="baa-Dv-BWC" firstAttribute="width" secondItem="Hb6-Ug-a7t" secondAttribute="width" constant="-20" id="tQp-T4-Ztz"/>
-                            <constraint firstItem="KHW-e1-rle" firstAttribute="top" secondItem="hZT-wD-wnX" secondAttribute="top" id="z13-QB-OtN"/>
+                            <constraint firstItem="Y7d-9F-LNg" firstAttribute="top" secondItem="Hb6-Ug-a7t" secondAttribute="top" constant="20" id="h09-xX-4BL"/>
+                            <constraint firstItem="BvY-DK-q3v" firstAttribute="top" secondItem="Y7d-9F-LNg" secondAttribute="bottom" id="hxb-7E-pHl"/>
+                            <constraint firstItem="WRm-aI-CMW" firstAttribute="leading" secondItem="Y7d-9F-LNg" secondAttribute="trailing" id="mHm-nd-CJF"/>
+                            <constraint firstItem="fPi-mS-9dG" firstAttribute="width" secondItem="Hb6-Ug-a7t" secondAttribute="width" id="nDS-MC-uwM"/>
+                            <constraint firstItem="Y7d-9F-LNg" firstAttribute="height" secondItem="BvY-DK-q3v" secondAttribute="height" id="qzq-IK-gjl"/>
+                            <constraint firstItem="WRm-aI-CMW" firstAttribute="top" secondItem="hZT-wD-wnX" secondAttribute="top" constant="16" id="r3N-jr-Bpb"/>
+                            <constraint firstItem="baa-Dv-BWC" firstAttribute="width" secondItem="Hb6-Ug-a7t" secondAttribute="width" constant="-32" id="tQp-T4-Ztz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hZT-wD-wnX"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Фарм" id="8SM-hd-hfm"/>
+                    <tabBarItem key="tabBarItem" title="Игра" id="8SM-hd-hfm"/>
                     <connections>
-                        <outletCollection property="tileOutletCollection" destination="oao-Yd-gh9" collectionClass="NSMutableArray" id="9rd-JM-sBX"/>
-                        <outletCollection property="tileOutletCollection" destination="RMT-cm-ssl" collectionClass="NSMutableArray" id="5Us-of-cHx"/>
-                        <outletCollection property="tileOutletCollection" destination="L0i-I4-BGI" collectionClass="NSMutableArray" id="mlt-KJ-lRh"/>
-                        <outletCollection property="tileOutletCollection" destination="xCf-dC-7Sa" collectionClass="NSMutableArray" id="DmQ-2g-ySs"/>
-                        <outletCollection property="tileOutletCollection" destination="fRY-Ww-Q2K" collectionClass="NSMutableArray" id="gAu-48-eSz"/>
-                        <outletCollection property="tileOutletCollection" destination="PuM-0h-I3X" collectionClass="NSMutableArray" id="0TK-Er-9cm"/>
-                        <outletCollection property="tileOutletCollection" destination="Q5f-Oa-stA" collectionClass="NSMutableArray" id="grR-Ua-owA"/>
-                        <outletCollection property="tileOutletCollection" destination="TsP-9c-k3g" collectionClass="NSMutableArray" id="ORh-ky-pzl"/>
-                        <outletCollection property="tileOutletCollection" destination="Zkf-0a-ovb" collectionClass="NSMutableArray" id="Hsc-cP-C6e"/>
+                        <outlet property="interactiveLabel" destination="fPi-mS-9dG" id="JKu-r1-mJC"/>
+                        <outlet property="lifeLabel" destination="MPZ-EO-7bf" id="qQv-28-UTI"/>
+                        <outlet property="scoreLabel" destination="5TT-BH-8As" id="X2N-8W-Nqj"/>
+                        <outletCollection property="tileButtons" destination="oao-Yd-gh9" collectionClass="NSMutableArray" id="9rd-JM-sBX"/>
+                        <outletCollection property="tileButtons" destination="RMT-cm-ssl" collectionClass="NSMutableArray" id="5Us-of-cHx"/>
+                        <outletCollection property="tileButtons" destination="L0i-I4-BGI" collectionClass="NSMutableArray" id="mlt-KJ-lRh"/>
+                        <outletCollection property="tileButtons" destination="xCf-dC-7Sa" collectionClass="NSMutableArray" id="DmQ-2g-ySs"/>
+                        <outletCollection property="tileButtons" destination="fRY-Ww-Q2K" collectionClass="NSMutableArray" id="gAu-48-eSz"/>
+                        <outletCollection property="tileButtons" destination="PuM-0h-I3X" collectionClass="NSMutableArray" id="0TK-Er-9cm"/>
+                        <outletCollection property="tileButtons" destination="Q5f-Oa-stA" collectionClass="NSMutableArray" id="grR-Ua-owA"/>
+                        <outletCollection property="tileButtons" destination="TsP-9c-k3g" collectionClass="NSMutableArray" id="ORh-ky-pzl"/>
+                        <outletCollection property="tileButtons" destination="Zkf-0a-ovb" collectionClass="NSMutableArray" id="Hsc-cP-C6e"/>
+                        <segue destination="tx9-Ok-VrN" kind="presentation" identifier="presentModallyDimViewControllerIdentifier" animates="NO" modalPresentationStyle="overCurrentContext" id="wOL-wt-Thh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Blj-vK-76r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="420" y="-248.72563718140933"/>
+            <point key="canvasLocation" x="420" y="-249.29577464788733"/>
+        </scene>
+        <!--Dim View Controller-->
+        <scene sceneID="0wA-26-JRA">
+            <objects>
+                <viewController storyboardIdentifier="dimViewControllerStoryboardID" id="tx9-Ok-VrN" customClass="DimViewController" customModule="swiftbook_olimp_project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oxs-p5-k07">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sAM-3d-wGn">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nrG-Gc-NKJ" customClass="RoundedButton" customModule="swiftbook_olimp_project" customModuleProvider="target">
+                                <rect key="frame" x="41.5" y="257" width="237" height="54"/>
+                                <color key="backgroundColor" red="0.95833522081375122" green="0.88479417562484741" blue="0.28025805950164795" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="n8j-3S-030"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="30"/>
+                                <state key="normal" title="Старт!">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="theCornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="sAM-3d-wGn" firstAttribute="top" secondItem="oxs-p5-k07" secondAttribute="top" id="9Y5-qQ-ln6"/>
+                            <constraint firstItem="nrG-Gc-NKJ" firstAttribute="centerX" secondItem="oxs-p5-k07" secondAttribute="centerX" id="YnK-Qr-5lE"/>
+                            <constraint firstItem="nrG-Gc-NKJ" firstAttribute="centerY" secondItem="oxs-p5-k07" secondAttribute="centerY" id="h04-AH-7Ty"/>
+                            <constraint firstItem="nrG-Gc-NKJ" firstAttribute="width" secondItem="sAM-3d-wGn" secondAttribute="width" multiplier="0.74" id="jVA-VQ-4vm"/>
+                            <constraint firstItem="sAM-3d-wGn" firstAttribute="trailing" secondItem="Vwe-y5-yQI" secondAttribute="trailing" id="nzA-TK-ggJ"/>
+                            <constraint firstItem="sAM-3d-wGn" firstAttribute="leading" secondItem="Vwe-y5-yQI" secondAttribute="leading" id="pbh-c5-vc4"/>
+                            <constraint firstItem="sAM-3d-wGn" firstAttribute="bottom" secondItem="Vwe-y5-yQI" secondAttribute="bottom" id="ziR-vQ-ecE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Vwe-y5-yQI"/>
+                    </view>
+                    <connections>
+                        <outlet property="dimView" destination="sAM-3d-wGn" id="5pk-OP-ynk"/>
+                        <outlet property="startButton" destination="nrG-Gc-NKJ" id="oKE-5F-3bA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CyJ-rE-Qxx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1361.25" y="-207.04225352112675"/>
         </scene>
         <!--Магазин-->
         <scene sceneID="Aqc-xi-iYs">
@@ -353,6 +490,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.19595640897750854" green="0.19613614678382874" blue="0.19598421454429626" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="dz5-XZ-7Av" kind="relationship" relationship="viewControllers" id="N6A-4J-WVq"/>
@@ -364,4 +502,9 @@
             <point key="canvasLocation" x="-718" y="-249"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="heart" width="56" height="56"/>
+        <image name="reload" width="512" height="512"/>
+        <image name="swiftcoin_score" width="56" height="56"/>
+    </resources>
 </document>
