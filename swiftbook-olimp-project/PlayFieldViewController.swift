@@ -26,6 +26,7 @@ class PlayFieldViewController: UIViewController {
         
         for tile in self.tileOutletCollection {
             tile.alpha = 0.5
+            tile.addTarget(self, action: #selector(self.aTileTapped(sender:)), for: .touchUpInside)
         }
         
 //        self.dimAndShowStart()
@@ -33,6 +34,11 @@ class PlayFieldViewController: UIViewController {
     }
     
     
+    @objc private func aTileTapped(sender: UIButton) {
+        
+        
+        
+    }
     
     private func playCombination(numberOfSteps: Int, speed: TimeInterval) {
         
@@ -41,7 +47,12 @@ class PlayFieldViewController: UIViewController {
         func recursionAnimation() {
             
             print("first recursion. count = \(count)")
-            self.tileOutletCollection[Int(arc4random_uniform(9))].blink {
+            
+            let randomValue = Int(arc4random_uniform(9))
+            
+            self.task.append(randomValue)
+            
+            self.tileOutletCollection[randomValue].blink {
                 count += 1
                 
                 print("before comparing count = \(count)")
@@ -55,6 +66,9 @@ class PlayFieldViewController: UIViewController {
         
         
     }
+    
+    
+    
     @IBAction func testButtonTapped(_ sender: UIView) {
         
 //        self.playCombination(numberOfSteps: 5, speed: 0)
@@ -63,9 +77,13 @@ class PlayFieldViewController: UIViewController {
         
     }
     
+    
+    
+    
     private func dimAndStopPlay(withRecord score: Int) {
         
     }
+    
     
     
     private var dimView: UIView!
