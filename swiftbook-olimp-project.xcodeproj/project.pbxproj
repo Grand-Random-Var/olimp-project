@@ -8,17 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		1FE0A1991FB654B50072DB33 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE0A1981FB654B50072DB33 /* DataManager.swift */; };
-		ED126B1E1FB64E8F00A876E2 /* Miner.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED126B1D1FB64E8F00A876E2 /* Miner.swift */; };
 		ED6579781FB6F6710027313B /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6579761FB6F6700027313B /* RoundedButton.swift */; };
 		ED6579791FB6F6710027313B /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6579771FB6F6700027313B /* RoundedView.swift */; };
 		ED65797C1FB6F9940027313B /* Button+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED65797B1FB6F9940027313B /* Button+Animations.swift */; };
+		ED65797E1FB703AF0027313B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED65797D1FB703AF0027313B /* SettingsViewController.swift */; };
+		ED6579801FB703D70027313B /* RecordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED65797F1FB703D70027313B /* RecordsViewController.swift */; };
 		EDA544A11FB64998005276E5 /* PlayFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA544A01FB64998005276E5 /* PlayFieldViewController.swift */; };
-		EDA544A31FB649AD005276E5 /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA544A21FB649AD005276E5 /* ShopViewController.swift */; };
-		EDA544A51FB64A6F005276E5 /* MinerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA544A41FB64A6F005276E5 /* MinerTableViewCell.swift */; };
-		EDA544A71FB64A8E005276E5 /* ShopItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA544A61FB64A8E005276E5 /* ShopItemCollectionViewCell.swift */; };
 		EDAC3A951FB6779200888ED6 /* Global Variables.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAC3A941FB6779200888ED6 /* Global Variables.swift */; };
 		EDBC61531FB22E1800A05899 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBC61521FB22E1800A05899 /* AppDelegate.swift */; };
-		EDBC61551FB22E1800A05899 /* MinersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBC61541FB22E1800A05899 /* MinersViewController.swift */; };
 		EDBC61581FB22E1800A05899 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDBC61561FB22E1800A05899 /* Main.storyboard */; };
 		EDBC615B1FB22E1800A05899 /* swiftbook_olimp_project.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EDBC61591FB22E1800A05899 /* swiftbook_olimp_project.xcdatamodeld */; };
 		EDBC615D1FB22E1800A05899 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDBC615C1FB22E1800A05899 /* Assets.xcassets */; };
@@ -27,18 +24,15 @@
 
 /* Begin PBXFileReference section */
 		1FE0A1981FB654B50072DB33 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
-		ED126B1D1FB64E8F00A876E2 /* Miner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Miner.swift; sourceTree = "<group>"; };
 		ED6579761FB6F6700027313B /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		ED6579771FB6F6700027313B /* RoundedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
 		ED65797B1FB6F9940027313B /* Button+Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+Animations.swift"; sourceTree = "<group>"; };
+		ED65797D1FB703AF0027313B /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		ED65797F1FB703D70027313B /* RecordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsViewController.swift; sourceTree = "<group>"; };
 		EDA544A01FB64998005276E5 /* PlayFieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayFieldViewController.swift; sourceTree = "<group>"; };
-		EDA544A21FB649AD005276E5 /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
-		EDA544A41FB64A6F005276E5 /* MinerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinerTableViewCell.swift; sourceTree = "<group>"; };
-		EDA544A61FB64A8E005276E5 /* ShopItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		EDAC3A941FB6779200888ED6 /* Global Variables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Global Variables.swift"; sourceTree = "<group>"; };
 		EDBC614F1FB22E1800A05899 /* swiftbook-olimp-project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swiftbook-olimp-project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDBC61521FB22E1800A05899 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EDBC61541FB22E1800A05899 /* MinersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinersViewController.swift; sourceTree = "<group>"; };
 		EDBC61571FB22E1800A05899 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EDBC615A1FB22E1800A05899 /* swiftbook_olimp_project.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = swiftbook_olimp_project.xcdatamodel; sourceTree = "<group>"; };
 		EDBC615C1FB22E1800A05899 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -57,14 +51,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1FE0A19A1FB660BB0072DB33 /* Farm Scene */ = {
-			isa = PBXGroup;
-			children = (
-				EDA544A01FB64998005276E5 /* PlayFieldViewController.swift */,
-			);
-			path = "Farm Scene";
-			sourceTree = "<group>";
-		};
 		ED65797A1FB6F6740027313B /* RoundedView */ = {
 			isa = PBXGroup;
 			children = (
@@ -74,30 +60,11 @@
 			path = RoundedView;
 			sourceTree = "<group>";
 		};
-		EDAC3A911FB6724E00888ED6 /* Miners Scene */ = {
-			isa = PBXGroup;
-			children = (
-				EDBC61541FB22E1800A05899 /* MinersViewController.swift */,
-				EDA544A41FB64A6F005276E5 /* MinerTableViewCell.swift */,
-			);
-			path = "Miners Scene";
-			sourceTree = "<group>";
-		};
-		EDAC3A921FB6726F00888ED6 /* Shop Scene */ = {
-			isa = PBXGroup;
-			children = (
-				EDA544A21FB649AD005276E5 /* ShopViewController.swift */,
-				EDA544A61FB64A8E005276E5 /* ShopItemCollectionViewCell.swift */,
-			);
-			path = "Shop Scene";
-			sourceTree = "<group>";
-		};
 		EDAC3A931FB676D200888ED6 /* Full Model Implementation */ = {
 			isa = PBXGroup;
 			children = (
 				EDAC3A941FB6779200888ED6 /* Global Variables.swift */,
 				1FE0A1981FB654B50072DB33 /* DataManager.swift */,
-				ED126B1D1FB64E8F00A876E2 /* Miner.swift */,
 				ED65797B1FB6F9940027313B /* Button+Animations.swift */,
 			);
 			path = "Full Model Implementation";
@@ -123,9 +90,9 @@
 			isa = PBXGroup;
 			children = (
 				EDBC61521FB22E1800A05899 /* AppDelegate.swift */,
-				EDAC3A911FB6724E00888ED6 /* Miners Scene */,
-				1FE0A19A1FB660BB0072DB33 /* Farm Scene */,
-				EDAC3A921FB6726F00888ED6 /* Shop Scene */,
+				ED65797D1FB703AF0027313B /* SettingsViewController.swift */,
+				EDA544A01FB64998005276E5 /* PlayFieldViewController.swift */,
+				ED65797F1FB703D70027313B /* RecordsViewController.swift */,
 				EDBC61561FB22E1800A05899 /* Main.storyboard */,
 				ED65797A1FB6F6740027313B /* RoundedView */,
 				EDAC3A931FB676D200888ED6 /* Full Model Implementation */,
@@ -209,13 +176,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED126B1E1FB64E8F00A876E2 /* Miner.swift in Sources */,
+				ED6579801FB703D70027313B /* RecordsViewController.swift in Sources */,
 				EDA544A11FB64998005276E5 /* PlayFieldViewController.swift in Sources */,
-				EDBC61551FB22E1800A05899 /* MinersViewController.swift in Sources */,
-				EDA544A71FB64A8E005276E5 /* ShopItemCollectionViewCell.swift in Sources */,
-				EDA544A31FB649AD005276E5 /* ShopViewController.swift in Sources */,
 				ED65797C1FB6F9940027313B /* Button+Animations.swift in Sources */,
-				EDA544A51FB64A6F005276E5 /* MinerTableViewCell.swift in Sources */,
+				ED65797E1FB703AF0027313B /* SettingsViewController.swift in Sources */,
 				ED6579781FB6F6710027313B /* RoundedButton.swift in Sources */,
 				EDBC61531FB22E1800A05899 /* AppDelegate.swift in Sources */,
 				ED6579791FB6F6710027313B /* RoundedView.swift in Sources */,
