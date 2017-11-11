@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F405A3B1FB70B7500FA5EA1 /* RecordsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F405A3A1FB70B7500FA5EA1 /* RecordsDataSource.swift */; };
 		1FE0A1991FB654B50072DB33 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE0A1981FB654B50072DB33 /* DataManager.swift */; };
 		ED6579781FB6F6710027313B /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6579761FB6F6700027313B /* RoundedButton.swift */; };
 		ED6579791FB6F6710027313B /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6579771FB6F6700027313B /* RoundedView.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F405A3A1FB70B7500FA5EA1 /* RecordsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsDataSource.swift; sourceTree = "<group>"; };
 		1FE0A1981FB654B50072DB33 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		ED6579761FB6F6700027313B /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		ED6579771FB6F6700027313B /* RoundedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
@@ -51,6 +53,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F405A391FB709C100FA5EA1 /* Records */ = {
+			isa = PBXGroup;
+			children = (
+				ED65797F1FB703D70027313B /* RecordsViewController.swift */,
+				1F405A3A1FB70B7500FA5EA1 /* RecordsDataSource.swift */,
+			);
+			path = Records;
+			sourceTree = "<group>";
+		};
 		ED65797A1FB6F6740027313B /* RoundedView */ = {
 			isa = PBXGroup;
 			children = (
@@ -92,7 +103,7 @@
 				EDBC61521FB22E1800A05899 /* AppDelegate.swift */,
 				ED65797D1FB703AF0027313B /* SettingsViewController.swift */,
 				EDA544A01FB64998005276E5 /* PlayFieldViewController.swift */,
-				ED65797F1FB703D70027313B /* RecordsViewController.swift */,
+				1F405A391FB709C100FA5EA1 /* Records */,
 				EDBC61561FB22E1800A05899 /* Main.storyboard */,
 				ED65797A1FB6F6740027313B /* RoundedView */,
 				EDAC3A931FB676D200888ED6 /* Full Model Implementation */,
@@ -184,6 +195,7 @@
 				EDBC61531FB22E1800A05899 /* AppDelegate.swift in Sources */,
 				ED6579791FB6F6710027313B /* RoundedView.swift in Sources */,
 				EDAC3A951FB6779200888ED6 /* Global Variables.swift in Sources */,
+				1F405A3B1FB70B7500FA5EA1 /* RecordsDataSource.swift in Sources */,
 				1FE0A1991FB654B50072DB33 /* DataManager.swift in Sources */,
 				EDBC615B1FB22E1800A05899 /* swiftbook_olimp_project.xcdatamodeld in Sources */,
 			);
