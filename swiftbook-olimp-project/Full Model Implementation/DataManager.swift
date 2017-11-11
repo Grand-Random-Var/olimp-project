@@ -8,6 +8,15 @@
 
 import Foundation
 import UIKit
+
+//Ключи для извлечения информации из UserDefaults. Отсутствие такой структуры-енума - есть бэд практис
+struct DataKeys {
+    static let swiftcoins = "swiftcoins"
+    static let energy = "energy"
+    static let clickCount = "clickCount"
+    static let lastUsedMinerIndex = "lastUsedMinerIndex"
+}
+
 class DataManager {
     
     //Так как принял решение об одном глобальном dataManager'e, то shared нужен только для его инициализации
@@ -18,10 +27,10 @@ class DataManager {
     var miners : [Miner] = []
     
     //Заменил название переменной "swiftCoins" на "swiftcoins", т.к. это одно слово. Например как пишется, к примеру, "Bitcoin"
-    var swiftcoins: Int = 0  {didSet{ UserDefaults.standard.set(swiftcoins, forKey: "swiftCoins") }}
-    var energy: Int = 0 {didSet{ UserDefaults.standard.set(energy, forKey: "energy") }}
-    var clickCount: Int = 0 {didSet{ UserDefaults.standard.set(clickCount, forKey: "clickCount") }}
-    var lastUsedMinerIndex: Int = 0 {didSet {UserDefaults.standard.set(lastUsedMinerIndex, forKey: "lastUsedMinerIndex")}}
+    var swiftcoins: Int = 0  {didSet{ UserDefaults.standard.set(swiftcoins, forKey: DataKeys.swiftcoins) }}
+    var energy: Int = 0 {didSet{ UserDefaults.standard.set(energy, forKey: DataKeys.energy) }}
+    var clickCount: Int = 0 {didSet{ UserDefaults.standard.set(clickCount, forKey: DataKeys.clickCount) }}
+    var lastUsedMinerIndex: Int = 0 {didSet {UserDefaults.standard.set(lastUsedMinerIndex, forKey: DataKeys.lastUsedMinerIndex)}}
     
     private init() {
         
@@ -29,7 +38,7 @@ class DataManager {
 //        let defaults = UserDefaults.standard
     
         //Извлечение или первая установка свойств
-        self.swiftcoins = UserDefaults.standard.integer(forKey: "swiftCoins")
+        self.swiftcoins = UserDefaults.standard.integer(forKey: DataKeys.swiftcoins)
         
 //        if let energy = UserDefaults.standard.value(forKey: "energy") as? Int {
 //            self.energy = energy
@@ -37,11 +46,11 @@ class DataManager {
 //            self.energy = 30
 //        }
         //перефразировал вышезакоменченный код в более сжатом формате
-        self.energy = (UserDefaults.standard.value(forKey: "enegry") as? Int) ?? 30
+        self.energy = (UserDefaults.standard.value(forKey: DataKeys.energy) as? Int) ?? 30
         
-        self.clickCount = UserDefaults.standard.integer(forKey: "clickCount")
+        self.clickCount = UserDefaults.standard.integer(forKey: DataKeys.clickCount)
         
-        self.lastUsedMinerIndex = UserDefaults.standard.value(forKey: "lastUsedMinerIndex") as? Int ?? 0
+        self.lastUsedMinerIndex = UserDefaults.standard.value(forKey: DataKeys.lastUsedMinerIndex) as? Int ?? 0
         
         //ВАЖНО: метод setMiners() должен исполняться после установки свойств 
         self.setMiners()

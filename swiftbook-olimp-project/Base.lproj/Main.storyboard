@@ -13,7 +13,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Miners-->
+        <!--Майнеры-->
         <scene sceneID="3Bz-Bm-uVz">
             <objects>
                 <viewController id="dMf-3q-niK" customClass="MinersViewController" customModule="swiftbook_olimp_project" customModuleProvider="target" sceneMemberID="viewController">
@@ -39,24 +39,42 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Видеокарта test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5BE-nO-x7L">
-                                                    <rect key="frame" x="97.5" y="36" width="207.5" height="26.5"/>
+                                                    <rect key="frame" x="97.5" y="10" width="207.5" height="26.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="цена/статус &quot;куплен&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pJW-Mj-OHC">
+                                                    <rect key="frame" x="97" y="68" width="171" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="шанс фарма(в формате &quot;1/n&quot;)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fid-Cc-NTk">
+                                                    <rect key="frame" x="97" y="44" width="237" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="5BE-nO-x7L" firstAttribute="leading" secondItem="PHa-tT-qts" secondAttribute="trailing" constant="8" id="2DG-6S-tlc"/>
-                                                <constraint firstItem="5BE-nO-x7L" firstAttribute="centerY" secondItem="oSS-KK-brQ" secondAttribute="centerY" id="4xY-dM-7eP"/>
+                                                <constraint firstItem="pJW-Mj-OHC" firstAttribute="leading" secondItem="fid-Cc-NTk" secondAttribute="leading" id="Hnd-K8-GcP"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="5BE-nO-x7L" secondAttribute="trailing" id="NVV-Oh-bXX"/>
+                                                <constraint firstItem="fid-Cc-NTk" firstAttribute="top" secondItem="5BE-nO-x7L" secondAttribute="bottom" constant="7.5" id="O74-hN-dmE"/>
                                                 <constraint firstItem="PHa-tT-qts" firstAttribute="height" secondItem="oSS-KK-brQ" secondAttribute="height" multiplier="0.8" id="PWM-9Y-Ubh"/>
+                                                <constraint firstItem="fid-Cc-NTk" firstAttribute="leading" secondItem="5BE-nO-x7L" secondAttribute="leading" id="Rnk-1W-g89"/>
+                                                <constraint firstItem="pJW-Mj-OHC" firstAttribute="top" secondItem="fid-Cc-NTk" secondAttribute="bottom" constant="3" id="WTl-Ti-sUo"/>
                                                 <constraint firstItem="PHa-tT-qts" firstAttribute="leading" secondItem="oSS-KK-brQ" secondAttribute="leading" constant="10" id="Zw0-TK-zoT"/>
                                                 <constraint firstItem="PHa-tT-qts" firstAttribute="centerY" secondItem="oSS-KK-brQ" secondAttribute="centerY" id="shq-1s-tkE"/>
+                                                <constraint firstItem="5BE-nO-x7L" firstAttribute="top" secondItem="PHa-tT-qts" secondAttribute="top" id="yLg-F5-EUi"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="farmChanceLabel" destination="fid-Cc-NTk" id="gAN-67-iyE"/>
+                                            <outlet property="nameLabel" destination="5BE-nO-x7L" id="sCS-Ta-gKu"/>
+                                            <outlet property="priceAndStatusLabel" destination="pJW-Mj-OHC" id="bAg-IK-4eo"/>
                                             <outlet property="theImageView" destination="PHa-tT-qts" id="jg3-gG-2Jx"/>
-                                            <outlet property="theLabel" destination="5BE-nO-x7L" id="sCS-Ta-gKu"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -90,7 +108,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6MI-qI-IuX"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Miners" id="N8j-pg-9P8"/>
+                    <tabBarItem key="tabBarItem" title="Майнеры" id="N8j-pg-9P8"/>
                     <connections>
                         <outlet property="energyCountLabel" destination="WRL-ha-q6j" id="W5m-Gk-9VY"/>
                         <outlet property="swiftcoinsCountLabel" destination="l6p-B6-uBA" id="qfh-5k-zW4"/>
@@ -101,7 +119,7 @@
             </objects>
             <point key="canvasLocation" x="420" y="-955.9859154929577"/>
         </scene>
-        <!--Farm-->
+        <!--Фарм-->
         <scene sceneID="eQV-OR-Yhm">
             <objects>
                 <viewController id="pMx-5P-B6f" customClass="FarmViewController" customModule="swiftbook_olimp_project" customModuleProvider="target" sceneMemberID="viewController">
@@ -158,7 +176,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hZT-wD-wnX"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Farm" id="8SM-hd-hfm"/>
+                    <tabBarItem key="tabBarItem" title="Фарм" id="8SM-hd-hfm"/>
                     <connections>
                         <outlet property="energyCountLabel" destination="C1i-sq-G34" id="Nva-YB-JgZ"/>
                         <outlet property="farmButton" destination="R76-PL-Syt" id="lTZ-2H-F3x"/>
@@ -170,7 +188,7 @@
             </objects>
             <point key="canvasLocation" x="420" y="-248.72563718140933"/>
         </scene>
-        <!--Shop-->
+        <!--Магазин-->
         <scene sceneID="Aqc-xi-iYs">
             <objects>
                 <viewController id="cb5-0G-Eb9" customClass="ShopViewController" customModule="swiftbook_olimp_project" customModuleProvider="target" sceneMemberID="viewController">
@@ -254,7 +272,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cbn-Fg-8ZD"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Shop" id="E7Y-qG-Rfm"/>
+                    <tabBarItem key="tabBarItem" title="Магазин" id="E7Y-qG-Rfm"/>
                     <connections>
                         <outlet property="collectionView" destination="426-Hf-42t" id="vow-AS-87g"/>
                         <outlet property="energyCountLabel" destination="xEX-7Y-uPh" id="cJX-dz-Z36"/>

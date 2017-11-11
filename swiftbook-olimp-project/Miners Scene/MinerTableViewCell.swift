@@ -13,11 +13,16 @@ class MinerTableViewCell: UITableViewCell {
     
     @IBOutlet weak var theImageView: UIImageView!
     
-    @IBOutlet weak var theLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    //Label показывающий текущий шанс. Говорю "текущий", потому что он сможет увеличиваться с помощью плюшек в магазине
+    @IBOutlet weak var farmChanceLabel: UILabel!
+    //Label цены. Если майнер куплен, то должна быть приписка "/куплен"
+    @IBOutlet weak var priceAndStatusLabel: UILabel!
+    
     
     func setup(withMiner miner: Miner) {
         self.theImageView.image = miner.image
-        self.theLabel.text = miner.name
+        self.nameLabel.text = miner.name
     }
     
 }

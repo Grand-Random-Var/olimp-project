@@ -13,10 +13,12 @@ import UIKit
 let dataManager = DataManager.shared
 
 
+var swiftcoinIncreasement = 1 //Позже swiftcoinIncreasement станет вычисляемым свойством из-за плюшек в магазине
+
 
 //Легко изменяемая, отчего удобная структура(а фактически enum) для содержания значений
 struct FarmChange {
-    static let low = 50 //Тестовое значение. Актуальное значение 50~60
-    static let medium = 13 //Тестовое значение. Актуальное значение 30~40
-    static let high = 9 //Тестовое значение. Актуальное значение 15~30
+    static var low = 50 //Тестовое значение. Актуальное значение 50~60
+    static var medium = 13 //Тестовое значение. Актуальное значение 30~40
+    static var high = 9 //Тестовое значение. Актуальное значение 15~30
 }

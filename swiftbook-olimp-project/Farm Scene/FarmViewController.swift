@@ -48,7 +48,7 @@ class FarmViewController: UIViewController {
         
         if miner.performMining() {
             print("increased swiftcoin count")
-            swiftcoin += 1
+            swiftcoin += swiftcoinIncreasement
         }
         miner.enegryConsumeClosure()
         setIndicators()
@@ -62,7 +62,7 @@ class FarmViewController: UIViewController {
     
     @objc private func setMiner() {
         self.miner = dataManager.miners[dataManager.lastUsedMinerIndex]
-        print("lastUsed index: \(dataManager.lastUsedMinerIndex)")
+//        print("lastUsed index: \(dataManager.lastUsedMinerIndex)")
         self.minerImageView.image = miner.image
     }
     

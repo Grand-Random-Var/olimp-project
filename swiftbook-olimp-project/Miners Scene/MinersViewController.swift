@@ -25,6 +25,8 @@ class MinersViewController: UIViewController, UITableViewDataSource, UITableView
         self.tableView.delegate = self
         self.tableView.dataSource = self
         
+        self.tableView.tableFooterView = UIView.init(frame: CGRect.zero)
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
