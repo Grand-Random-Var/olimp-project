@@ -14,6 +14,9 @@ import UIKit
 
 struct DataKeys {
     static let records = "records"
+    static let numberOfBlinks = "numberOfBlinks"
+    static let blinkDuration = "blinkDuration"
+    static let settings = "settings"
 }
 
 struct Record {
@@ -21,7 +24,45 @@ struct Record {
     let name: String
 }
 
+
+
+//struct Settings {
+//    var numberOfBlinks: Int
+//    var blinkDuration: TimeInterval
+//    
+//    init(withNumberOfBlinks numberOfBlinks: Int, blinkDuration: TimeInterval) {
+//        self.numberOfBlinks = numberOfBlinks
+//        self.blinkDuration = blinkDuration
+//    }
+//    
+//    init(fromDict dict: Dictionary<String,Any>) {
+//        self.numberOfBlinks = dict[DataKeys.numberOfBlinks]! as! Int
+//        self.blinkDuration = dict[DataKeys.blinkDuration]! as! TimeInterval
+//        
+//    }
+//    
+//    func setNumberOfBlinks(value: Int) {
+//        UserDefaults.standard.set([DataKeys.blinkDuration: self.blinkDuration, DataKeys.numberOfBlinks: value], forKey: DataKeys.settings)
+//    }
+//    func setBlinkDuration(value: Int) {
+//        UserDefaults.standard.set([DataKeys.blinkDuration: value, DataKeys.numberOfBlinks: self.numberOfBlinks], forKey: DataKeys.settings)
+//    }
+//    
+//    static func getSettings() -> Settings {
+//        let fetchedSettings = Settings.init(fromDict: UserDefaults.standard.value(forKey: DataKeys.settings)! as! Dictionary<String,Any>) 
+//        return fetchedSettings
+//    }
+//    static func save(settings: Settings) {
+//        var dict = Dictionary<String, Any>()
+//        dict[DataKeys.numberOfBlinks] = self.numberOfBlinks
+//        dict[DataKeys.blinkDuration] = self.blinkDuration
+//        UserDefaults.standard.set(dict, forKey: DataKeys.settings)
+//    }
+//}
+
 class DataManager {
+    
+    
     
     //Так как принял решение об одном глобальном dataManager'e, то shared нужен только для его инициализации
     
@@ -33,6 +74,10 @@ class DataManager {
     
     private init() {
         
+        //Установка стандарных настроек
+        if UserDefaults.standard.value(forKey: DataKeys.settings) == nil {
+            UserDefaults.standard.setValue([DataKeys.blinkDuration: 0.2, DataKeys.numberOfBlinks: 5], forKey: DataKeys.settings)
+        }
         
         if UserDefaults.standard.value(forKey: DataKeys.records) as? [Record] == nil {
             UserDefaults.standard.set(Array<Record>(), forKey: DataKeys.records)
