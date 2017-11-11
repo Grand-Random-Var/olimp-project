@@ -9,7 +9,10 @@
 /* Begin PBXBuildFile section */
 		1FE0A1991FB654B50072DB33 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE0A1981FB654B50072DB33 /* DataManager.swift */; };
 		ED126B1E1FB64E8F00A876E2 /* Miner.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED126B1D1FB64E8F00A876E2 /* Miner.swift */; };
-		EDA544A11FB64998005276E5 /* FarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA544A01FB64998005276E5 /* FarmViewController.swift */; };
+		ED6579781FB6F6710027313B /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6579761FB6F6700027313B /* RoundedButton.swift */; };
+		ED6579791FB6F6710027313B /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6579771FB6F6700027313B /* RoundedView.swift */; };
+		ED65797C1FB6F9940027313B /* Button+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED65797B1FB6F9940027313B /* Button+Animations.swift */; };
+		EDA544A11FB64998005276E5 /* PlayFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA544A01FB64998005276E5 /* PlayFieldViewController.swift */; };
 		EDA544A31FB649AD005276E5 /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA544A21FB649AD005276E5 /* ShopViewController.swift */; };
 		EDA544A51FB64A6F005276E5 /* MinerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA544A41FB64A6F005276E5 /* MinerTableViewCell.swift */; };
 		EDA544A71FB64A8E005276E5 /* ShopItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA544A61FB64A8E005276E5 /* ShopItemCollectionViewCell.swift */; };
@@ -25,7 +28,10 @@
 /* Begin PBXFileReference section */
 		1FE0A1981FB654B50072DB33 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		ED126B1D1FB64E8F00A876E2 /* Miner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Miner.swift; sourceTree = "<group>"; };
-		EDA544A01FB64998005276E5 /* FarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmViewController.swift; sourceTree = "<group>"; };
+		ED6579761FB6F6700027313B /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		ED6579771FB6F6700027313B /* RoundedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
+		ED65797B1FB6F9940027313B /* Button+Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+Animations.swift"; sourceTree = "<group>"; };
+		EDA544A01FB64998005276E5 /* PlayFieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayFieldViewController.swift; sourceTree = "<group>"; };
 		EDA544A21FB649AD005276E5 /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
 		EDA544A41FB64A6F005276E5 /* MinerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinerTableViewCell.swift; sourceTree = "<group>"; };
 		EDA544A61FB64A8E005276E5 /* ShopItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopItemCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -54,9 +60,18 @@
 		1FE0A19A1FB660BB0072DB33 /* Farm Scene */ = {
 			isa = PBXGroup;
 			children = (
-				EDA544A01FB64998005276E5 /* FarmViewController.swift */,
+				EDA544A01FB64998005276E5 /* PlayFieldViewController.swift */,
 			);
 			path = "Farm Scene";
+			sourceTree = "<group>";
+		};
+		ED65797A1FB6F6740027313B /* RoundedView */ = {
+			isa = PBXGroup;
+			children = (
+				ED6579761FB6F6700027313B /* RoundedButton.swift */,
+				ED6579771FB6F6700027313B /* RoundedView.swift */,
+			);
+			path = RoundedView;
 			sourceTree = "<group>";
 		};
 		EDAC3A911FB6724E00888ED6 /* Miners Scene */ = {
@@ -83,6 +98,7 @@
 				EDAC3A941FB6779200888ED6 /* Global Variables.swift */,
 				1FE0A1981FB654B50072DB33 /* DataManager.swift */,
 				ED126B1D1FB64E8F00A876E2 /* Miner.swift */,
+				ED65797B1FB6F9940027313B /* Button+Animations.swift */,
 			);
 			path = "Full Model Implementation";
 			sourceTree = "<group>";
@@ -111,6 +127,7 @@
 				1FE0A19A1FB660BB0072DB33 /* Farm Scene */,
 				EDAC3A921FB6726F00888ED6 /* Shop Scene */,
 				EDBC61561FB22E1800A05899 /* Main.storyboard */,
+				ED65797A1FB6F6740027313B /* RoundedView */,
 				EDAC3A931FB676D200888ED6 /* Full Model Implementation */,
 				EDBC615C1FB22E1800A05899 /* Assets.xcassets */,
 				EDBC615E1FB22E1800A05899 /* LaunchScreen.storyboard */,
@@ -193,12 +210,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED126B1E1FB64E8F00A876E2 /* Miner.swift in Sources */,
-				EDA544A11FB64998005276E5 /* FarmViewController.swift in Sources */,
+				EDA544A11FB64998005276E5 /* PlayFieldViewController.swift in Sources */,
 				EDBC61551FB22E1800A05899 /* MinersViewController.swift in Sources */,
 				EDA544A71FB64A8E005276E5 /* ShopItemCollectionViewCell.swift in Sources */,
 				EDA544A31FB649AD005276E5 /* ShopViewController.swift in Sources */,
+				ED65797C1FB6F9940027313B /* Button+Animations.swift in Sources */,
 				EDA544A51FB64A6F005276E5 /* MinerTableViewCell.swift in Sources */,
+				ED6579781FB6F6710027313B /* RoundedButton.swift in Sources */,
 				EDBC61531FB22E1800A05899 /* AppDelegate.swift in Sources */,
+				ED6579791FB6F6710027313B /* RoundedView.swift in Sources */,
 				EDAC3A951FB6779200888ED6 /* Global Variables.swift in Sources */,
 				1FE0A1991FB654B50072DB33 /* DataManager.swift in Sources */,
 				EDBC615B1FB22E1800A05899 /* swiftbook_olimp_project.xcdatamodeld in Sources */,

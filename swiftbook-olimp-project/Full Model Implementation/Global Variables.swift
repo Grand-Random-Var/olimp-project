@@ -14,12 +14,7 @@ var dataManager = DataManager.shared
 
 var swiftcoinIncreasement = 1 //Позже swiftcoinIncreasement станет вычисляемым свойством из-за плюшек в магазине
 
-//Легко изменяемая, отчего удобная структура(а фактически enum) для содержания значений
-struct FarmChance {
-    static var low = Double(1)/Double(3) //Тестовое значение. Актуальное значение 50~60
-    static var medium = Double(1)/Double(2) //Тестовое значение. Актуальное значение 30~40
-    static var high = Double(1)/Double(1) //Тестовое значение. Актуальное значение 15~30
-}
+
 
 //Цены на miner'ы . Пока что этот массив находится здесь. Его нужно будет куда-нибудь перенести
 let prices = [0, 50, 200]
@@ -33,3 +28,5 @@ var clickCycleSize: Int {
 func randomFrom0To1() -> Double {
     return Double(arc4random())/Double(UInt32.max)
 }
+
+let dimAlphaConstant: CGFloat = 0.5

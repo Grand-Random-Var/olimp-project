@@ -84,7 +84,7 @@ class MinersViewController: UIViewController, UITableViewDataSource, UITableView
                     //выбор купленного майнера
                     dataManager.lastUsedMinerIndex = indexPath.row
                     
-                    //Посылаю уведомление о том, что поменял майнер. За этим уведомлением будет наболюдать FarmViewController
+                    //Посылаю уведомление о том, что поменял майнер. За этим уведомлением будет наболюдать PlayFieldViewController
                     NotificationCenter.default.post(name: NSNotification.Name.init("minerChanged"), object: nil)
                     
                     //Из-за метода reloadData анимация метода deselectRow может не сработать
@@ -119,7 +119,7 @@ class MinersViewController: UIViewController, UITableViewDataSource, UITableView
             
             dataManager.lastUsedMinerIndex = indexPath.row
             
-            //Посылаю уведомление о том, что поменял майнер. За этим уведомлением будет наболюдать FarmViewController
+            //Посылаю уведомление о том, что поменял майнер. За этим уведомлением будет наболюдать PlayFieldViewController
             NotificationCenter.default.post(name: NSNotification.Name.init("minerChanged"), object: nil)
             
             
