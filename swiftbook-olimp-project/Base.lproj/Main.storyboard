@@ -13,7 +13,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Miners-->
+        <!--Майнеры-->
         <scene sceneID="3Bz-Bm-uVz">
             <objects>
                 <viewController id="dMf-3q-niK" customClass="MinersViewController" customModule="swiftbook_olimp_project" customModuleProvider="target" sceneMemberID="viewController">
@@ -25,7 +25,7 @@
                                 <rect key="frame" x="0.0" y="44.5" width="320" height="474.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="AHg-7R-JqY" customClass="MinerTableViewCell" customModule="swiftbook_olimp_project" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MinerTableViewCellIdentifier" rowHeight="100" id="AHg-7R-JqY" customClass="MinerTableViewCell" customModule="swiftbook_olimp_project" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AHg-7R-JqY" id="oSS-KK-brQ">
@@ -33,45 +33,63 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PHa-tT-qts">
-                                                    <rect key="frame" x="0.0" y="10" width="79.5" height="79.5"/>
+                                                    <rect key="frame" x="10" y="10" width="79.5" height="79.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="PHa-tT-qts" secondAttribute="height" id="xga-sw-1hD"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Видеокарта test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5BE-nO-x7L">
-                                                    <rect key="frame" x="87.5" y="31" width="217" height="36"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                    <rect key="frame" x="97.5" y="10" width="207.5" height="26.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="цена/статус &quot;куплен&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pJW-Mj-OHC">
+                                                    <rect key="frame" x="97" y="68" width="171" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="шанс фарма(в формате &quot;1/n&quot;)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fid-Cc-NTk">
+                                                    <rect key="frame" x="97" y="44" width="237" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="5BE-nO-x7L" firstAttribute="leading" secondItem="PHa-tT-qts" secondAttribute="trailing" constant="8" id="2DG-6S-tlc"/>
-                                                <constraint firstItem="5BE-nO-x7L" firstAttribute="centerY" secondItem="oSS-KK-brQ" secondAttribute="centerY" id="4xY-dM-7eP"/>
+                                                <constraint firstItem="pJW-Mj-OHC" firstAttribute="leading" secondItem="fid-Cc-NTk" secondAttribute="leading" id="Hnd-K8-GcP"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="5BE-nO-x7L" secondAttribute="trailing" id="NVV-Oh-bXX"/>
+                                                <constraint firstItem="fid-Cc-NTk" firstAttribute="top" secondItem="5BE-nO-x7L" secondAttribute="bottom" constant="7.5" id="O74-hN-dmE"/>
                                                 <constraint firstItem="PHa-tT-qts" firstAttribute="height" secondItem="oSS-KK-brQ" secondAttribute="height" multiplier="0.8" id="PWM-9Y-Ubh"/>
-                                                <constraint firstItem="PHa-tT-qts" firstAttribute="leading" secondItem="oSS-KK-brQ" secondAttribute="leading" id="Zw0-TK-zoT"/>
+                                                <constraint firstItem="fid-Cc-NTk" firstAttribute="leading" secondItem="5BE-nO-x7L" secondAttribute="leading" id="Rnk-1W-g89"/>
+                                                <constraint firstItem="pJW-Mj-OHC" firstAttribute="top" secondItem="fid-Cc-NTk" secondAttribute="bottom" constant="3" id="WTl-Ti-sUo"/>
+                                                <constraint firstItem="PHa-tT-qts" firstAttribute="leading" secondItem="oSS-KK-brQ" secondAttribute="leading" constant="10" id="Zw0-TK-zoT"/>
                                                 <constraint firstItem="PHa-tT-qts" firstAttribute="centerY" secondItem="oSS-KK-brQ" secondAttribute="centerY" id="shq-1s-tkE"/>
+                                                <constraint firstItem="5BE-nO-x7L" firstAttribute="top" secondItem="PHa-tT-qts" secondAttribute="top" id="yLg-F5-EUi"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="farmChanceLabel" destination="fid-Cc-NTk" id="gAN-67-iyE"/>
+                                            <outlet property="nameLabel" destination="5BE-nO-x7L" id="sCS-Ta-gKu"/>
+                                            <outlet property="priceAndStatusLabel" destination="pJW-Mj-OHC" id="bAg-IK-4eo"/>
                                             <outlet property="theImageView" destination="PHa-tT-qts" id="jg3-gG-2Jx"/>
-                                            <outlet property="theLabel" destination="5BE-nO-x7L" id="sCS-Ta-gKu"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="LEj-0b-aNr">
-                                <rect key="frame" x="55.5" y="24" width="209" height="20.5"/>
+                                <rect key="frame" x="39.5" y="24" width="241.5" height="20.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="swiftcoins: 53" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l6p-B6-uBA">
-                                        <rect key="frame" x="0.0" y="0.0" width="106.5" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="свифткоины: 53" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l6p-B6-uBA">
+                                        <rect key="frame" x="0.0" y="0.0" width="127" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="energy: 30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WRL-ha-q6j">
-                                        <rect key="frame" x="126.5" y="0.0" width="82.5" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="энергия: 30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WRL-ha-q6j">
+                                        <rect key="frame" x="147" y="0.0" width="94.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -90,7 +108,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6MI-qI-IuX"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Miners" id="N8j-pg-9P8"/>
+                    <tabBarItem key="tabBarItem" title="Майнеры" id="N8j-pg-9P8"/>
                     <connections>
                         <outlet property="energyCountLabel" destination="WRL-ha-q6j" id="W5m-Gk-9VY"/>
                         <outlet property="swiftcoinsCountLabel" destination="l6p-B6-uBA" id="qfh-5k-zW4"/>
@@ -101,7 +119,7 @@
             </objects>
             <point key="canvasLocation" x="420" y="-955.9859154929577"/>
         </scene>
-        <!--Farm-->
+        <!--Фарм-->
         <scene sceneID="eQV-OR-Yhm">
             <objects>
                 <viewController id="pMx-5P-B6f" customClass="FarmViewController" customModule="swiftbook_olimp_project" customModuleProvider="target" sceneMemberID="viewController">
@@ -113,7 +131,7 @@
                                 <rect key="frame" x="0.0" y="375.5" width="320" height="143.5"/>
                                 <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="60"/>
-                                <state key="normal" title="farm!">
+                                <state key="normal" title="Фармить!">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -127,16 +145,16 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Bgg-5O-mth">
-                                <rect key="frame" x="55.5" y="24" width="209" height="20.5"/>
+                                <rect key="frame" x="39.5" y="24" width="241.5" height="20.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="swiftcoins: 53" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ciw-33-vfi">
-                                        <rect key="frame" x="0.0" y="0.0" width="106.5" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="свифткоины: 53" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ciw-33-vfi">
+                                        <rect key="frame" x="0.0" y="0.0" width="127" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="energy: 30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C1i-sq-G34">
-                                        <rect key="frame" x="126.5" y="0.0" width="82.5" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="энергия: 30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C1i-sq-G34">
+                                        <rect key="frame" x="147" y="0.0" width="94.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -158,7 +176,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hZT-wD-wnX"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Farm" id="8SM-hd-hfm"/>
+                    <tabBarItem key="tabBarItem" title="Фарм" id="8SM-hd-hfm"/>
                     <connections>
                         <outlet property="energyCountLabel" destination="C1i-sq-G34" id="Nva-YB-JgZ"/>
                         <outlet property="farmButton" destination="R76-PL-Syt" id="lTZ-2H-F3x"/>
@@ -170,7 +188,7 @@
             </objects>
             <point key="canvasLocation" x="420" y="-248.72563718140933"/>
         </scene>
-        <!--Shop-->
+        <!--Магазин-->
         <scene sceneID="Aqc-xi-iYs">
             <objects>
                 <viewController id="cb5-0G-Eb9" customClass="ShopViewController" customModule="swiftbook_olimp_project" customModuleProvider="target" sceneMemberID="viewController">
@@ -179,16 +197,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="5tw-ZW-KNl">
-                                <rect key="frame" x="55.5" y="24" width="209" height="20.5"/>
+                                <rect key="frame" x="39.5" y="24" width="241.5" height="20.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="swiftcoins: 53" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L55-kz-bze">
-                                        <rect key="frame" x="0.0" y="0.0" width="106.5" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="свифткоины: 53" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L55-kz-bze">
+                                        <rect key="frame" x="0.0" y="0.0" width="127" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="energy: 30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xEX-7Y-uPh">
-                                        <rect key="frame" x="126.5" y="0.0" width="82.5" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="энергия: 30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xEX-7Y-uPh">
+                                        <rect key="frame" x="147" y="0.0" width="94.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -205,7 +223,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="L9U-FZ-TPz" customClass="ShopItemCollectionViewCell" customModule="swiftbook_olimp_project" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ShopItemCollectionViewCellIdentifier" id="L9U-FZ-TPz" customClass="ShopItemCollectionViewCell" customModule="swiftbook_olimp_project" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="87" height="112"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -254,7 +272,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cbn-Fg-8ZD"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Shop" id="E7Y-qG-Rfm"/>
+                    <tabBarItem key="tabBarItem" title="Магазин" id="E7Y-qG-Rfm"/>
                     <connections>
                         <outlet property="collectionView" destination="426-Hf-42t" id="vow-AS-87g"/>
                         <outlet property="energyCountLabel" destination="xEX-7Y-uPh" id="cJX-dz-Z36"/>
@@ -275,9 +293,9 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="pMx-5P-B6f" kind="relationship" relationship="viewControllers" id="grA-ry-cf1"/>
-                        <segue destination="dMf-3q-niK" kind="relationship" relationship="viewControllers" id="zW1-Nx-lw1"/>
-                        <segue destination="cb5-0G-Eb9" kind="relationship" relationship="viewControllers" id="9ux-gw-rsa"/>
+                        <segue destination="dMf-3q-niK" kind="relationship" relationship="viewControllers" id="WnE-7t-SEj"/>
+                        <segue destination="pMx-5P-B6f" kind="relationship" relationship="viewControllers" id="HTZ-0U-sIs"/>
+                        <segue destination="cb5-0G-Eb9" kind="relationship" relationship="viewControllers" id="9I9-UW-Y9U"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2cJ-vx-vST" userLabel="First Responder" sceneMemberID="firstResponder"/>
