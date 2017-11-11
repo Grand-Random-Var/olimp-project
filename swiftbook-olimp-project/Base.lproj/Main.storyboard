@@ -24,7 +24,7 @@
                     <view key="view" contentMode="scaleToFill" id="7Jk-Gj-6Wf">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.19595640897750854" green="0.19613614678382874" blue="0.19598421454429626" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="hEE-fY-ngy"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="Oyz-qH-6gi"/>
@@ -33,7 +33,7 @@
             </objects>
             <point key="canvasLocation" x="336" y="-965"/>
         </scene>
-        <!--Фарм-->
+        <!--Игра-->
         <scene sceneID="eQV-OR-Yhm">
             <objects>
                 <viewController id="pMx-5P-B6f" customClass="PlayFieldViewController" customModule="swiftbook_olimp_project" customModuleProvider="target" sceneMemberID="viewController">
@@ -317,7 +317,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hZT-wD-wnX"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Фарм" id="8SM-hd-hfm"/>
+                    <tabBarItem key="tabBarItem" title="Игра" id="8SM-hd-hfm"/>
                     <connections>
                         <outlet property="interactiveLabel" destination="fPi-mS-9dG" id="JKu-r1-mJC"/>
                         <outlet property="lifeLabel" destination="MPZ-EO-7bf" id="qQv-28-UTI"/>
@@ -331,11 +331,61 @@
                         <outletCollection property="tileButtons" destination="Q5f-Oa-stA" collectionClass="NSMutableArray" id="grR-Ua-owA"/>
                         <outletCollection property="tileButtons" destination="TsP-9c-k3g" collectionClass="NSMutableArray" id="ORh-ky-pzl"/>
                         <outletCollection property="tileButtons" destination="Zkf-0a-ovb" collectionClass="NSMutableArray" id="Hsc-cP-C6e"/>
+                        <segue destination="tx9-Ok-VrN" kind="presentation" identifier="presentModallyDimViewControllerIdentifier" animates="NO" modalPresentationStyle="overCurrentContext" id="wOL-wt-Thh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Blj-vK-76r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="420" y="-249.29577464788733"/>
+        </scene>
+        <!--Dim View Controller-->
+        <scene sceneID="0wA-26-JRA">
+            <objects>
+                <viewController storyboardIdentifier="dimViewControllerStoryboardID" id="tx9-Ok-VrN" customClass="DimViewController" customModule="swiftbook_olimp_project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oxs-p5-k07">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sAM-3d-wGn">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nrG-Gc-NKJ" customClass="RoundedButton" customModule="swiftbook_olimp_project" customModuleProvider="target">
+                                <rect key="frame" x="41.5" y="257" width="237" height="54"/>
+                                <color key="backgroundColor" red="0.95833522081375122" green="0.88479417562484741" blue="0.28025805950164795" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="n8j-3S-030"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="30"/>
+                                <state key="normal" title="Старт!">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="theCornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="sAM-3d-wGn" firstAttribute="top" secondItem="oxs-p5-k07" secondAttribute="top" id="9Y5-qQ-ln6"/>
+                            <constraint firstItem="nrG-Gc-NKJ" firstAttribute="centerX" secondItem="oxs-p5-k07" secondAttribute="centerX" id="YnK-Qr-5lE"/>
+                            <constraint firstItem="nrG-Gc-NKJ" firstAttribute="centerY" secondItem="oxs-p5-k07" secondAttribute="centerY" id="h04-AH-7Ty"/>
+                            <constraint firstItem="nrG-Gc-NKJ" firstAttribute="width" secondItem="sAM-3d-wGn" secondAttribute="width" multiplier="0.74" id="jVA-VQ-4vm"/>
+                            <constraint firstItem="sAM-3d-wGn" firstAttribute="trailing" secondItem="Vwe-y5-yQI" secondAttribute="trailing" id="nzA-TK-ggJ"/>
+                            <constraint firstItem="sAM-3d-wGn" firstAttribute="leading" secondItem="Vwe-y5-yQI" secondAttribute="leading" id="pbh-c5-vc4"/>
+                            <constraint firstItem="sAM-3d-wGn" firstAttribute="bottom" secondItem="Vwe-y5-yQI" secondAttribute="bottom" id="ziR-vQ-ecE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Vwe-y5-yQI"/>
+                    </view>
+                    <connections>
+                        <outlet property="dimView" destination="sAM-3d-wGn" id="5pk-OP-ynk"/>
+                        <outlet property="startButton" destination="nrG-Gc-NKJ" id="oKE-5F-3bA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CyJ-rE-Qxx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1361.25" y="-207.04225352112675"/>
         </scene>
         <!--Магазин-->
         <scene sceneID="Aqc-xi-iYs">
@@ -440,6 +490,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.19595640897750854" green="0.19613614678382874" blue="0.19598421454429626" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="dz5-XZ-7Av" kind="relationship" relationship="viewControllers" id="N6A-4J-WVq"/>

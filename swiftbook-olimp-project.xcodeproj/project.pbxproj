@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1F405A3B1FB70B7500FA5EA1 /* RecordsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F405A3A1FB70B7500FA5EA1 /* RecordsDataSource.swift */; };
-		1F405A3E1FB7220E00FA5EA1 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F405A3D1FB7220E00FA5EA1 /* StartViewController.swift */; };
+		1F405A3E1FB7220E00FA5EA1 /* DimViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F405A3D1FB7220E00FA5EA1 /* DimViewController.swift */; };
 		1FE0A1991FB654B50072DB33 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE0A1981FB654B50072DB33 /* DataManager.swift */; };
 		ED6579781FB6F6710027313B /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6579761FB6F6700027313B /* RoundedButton.swift */; };
 		ED6579791FB6F6710027313B /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6579771FB6F6700027313B /* RoundedView.swift */; };
@@ -26,7 +26,7 @@
 
 /* Begin PBXFileReference section */
 		1F405A3A1FB70B7500FA5EA1 /* RecordsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsDataSource.swift; sourceTree = "<group>"; };
-		1F405A3D1FB7220E00FA5EA1 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		1F405A3D1FB7220E00FA5EA1 /* DimViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DimViewController.swift; sourceTree = "<group>"; };
 		1FE0A1981FB654B50072DB33 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		ED6579761FB6F6700027313B /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		ED6579771FB6F6700027313B /* RoundedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
@@ -68,7 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				EDA544A01FB64998005276E5 /* PlayFieldViewController.swift */,
-				1F405A3D1FB7220E00FA5EA1 /* StartViewController.swift */,
+				1F405A3D1FB7220E00FA5EA1 /* DimViewController.swift */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -209,7 +209,7 @@
 				ED6579801FB703D70027313B /* RecordsViewController.swift in Sources */,
 				EDA544A11FB64998005276E5 /* PlayFieldViewController.swift in Sources */,
 				ED65797C1FB6F9940027313B /* UIView+Animations.swift in Sources */,
-				1F405A3E1FB7220E00FA5EA1 /* StartViewController.swift in Sources */,
+				1F405A3E1FB7220E00FA5EA1 /* DimViewController.swift in Sources */,
 				ED65797E1FB703AF0027313B /* SettingsViewController.swift in Sources */,
 				ED6579781FB6F6710027313B /* RoundedButton.swift in Sources */,
 				EDBC61531FB22E1800A05899 /* AppDelegate.swift in Sources */,

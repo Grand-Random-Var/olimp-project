@@ -18,7 +18,7 @@ var dataManager = DataManager.shared
 //    return Double(arc4random())/Double(UInt32.max)
 //}
 
-let defaultSettings = Settings.init(withNumberOfBlinks: 4, blinkDuration: 0.4)
+let defaultSettings = Settings.init(withNumberOfBlinks: 4, blinkDuration: 0.5)
 
 
 let delayBeforePlayingCombination = 1.6

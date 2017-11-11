@@ -27,6 +27,8 @@ class PlayFieldViewController: UIViewController {
     @IBOutlet weak var interactiveLabel: UILabel!
     
     
+    let dimViewController = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "dimViewControllerStoryboardID") as! DimViewController
+    
     enum GameStatus {
         case isStopped, isShowingCombination,isGuessing
     }
@@ -68,6 +70,9 @@ class PlayFieldViewController: UIViewController {
         
         print("settings: \(dataManager.settings)")
         print("score per win with dur: \(scorePerWin(withSettings: dataManager.settings))")
+        
+        //Установка программных view
+        self.setupViews()
         
         for tile in self.tileButtons {
             tile.alpha = dimAlphaConstant
@@ -186,7 +191,10 @@ class PlayFieldViewController: UIViewController {
     
     @IBAction func reloadButtonTapped(_ sender: UIView) {
         
-        self.win()
+//        self.win()
+        
+        
+        self.performSegue(withIdentifier: "presentModallyDimViewControllerIdentifier", sender: nil)
         
         
         
@@ -198,7 +206,7 @@ class PlayFieldViewController: UIViewController {
     
     
     
-    private func dimAndStopPlay(withRecord score: Int) {
+    private func dimAndStopPlay() {
         
     }
     
@@ -211,21 +219,21 @@ class PlayFieldViewController: UIViewController {
         
         self.gameStatus = .isShowingCombination
         
-        dimView = UIView.init(frame: self.view.frame)
-        dimView.backgroundColor = .black
-        //Потом сильнее проясню цвет
-        dimView.alpha = 0.3
+//        dimView = UIView.init(frame: self.view.frame)
+//        dimView.backgroundColor = .black
+//        //Потом сильнее проясню цвет
+//        dimView.alpha = 0.3
         
-        startButton = UIButton.init()
-        startButton.frame.size = CGSize.init(width: dimView.frame.size.width * 0.74, height: 54)
-        startButton.center = dimView.center
-        startButton.setTitle("Старт!", for: .normal)
-        startButton.titleLabel!.font = startButton.titleLabel!.font.withSize(24)
-        startButton.backgroundColor = #colorLiteral(red: 0.9583352208, green: 0.8847941756, blue: 0.2802580595, alpha: 1)
-        startButton.alpha = 0.3
-        startButton.addTarget(self, action: #selector(self.startButtonTapped(sender:)), for: UIControlEvents.touchUpInside)
-        startButton.clipsToBounds = true
-        startButton.layer.cornerRadius = 8
+//        startButton = UIButton.init()
+//        startButton.frame.size = CGSize.init(width: dimView.frame.size.width * 0.74, height: 54)
+//        startButton.center = dimView.center
+//        startButton.setTitle("Старт!", for: .normal)
+//        startButton.titleLabel!.font = startButton.titleLabel!.font.withSize(24)
+//        startButton.backgroundColor = #colorLiteral(red: 0.9583352208, green: 0.8847941756, blue: 0.2802580595, alpha: 1)
+//        startButton.alpha = 0.3
+//        startButton.addTarget(self, action: #selector(self.startButtonTapped(sender:)), for: UIControlEvents.touchUpInside)
+//        startButton.clipsToBounds = true
+//        startButton.layer.cornerRadius = 8
         
         
         self.view.addSubview(dimView)
@@ -288,18 +296,21 @@ class PlayFieldViewController: UIViewController {
     private func lose() {
         
         //Если теряется не последняя жизнь 
-        if self.life > 1 {
+        if self.life > 0 {
             self.life -= 1
             self.lifeLabel.text = "\(self.life)"
             self.lifeLabel.highlightWithScale()
             
             self.startNewRound()
             
+        } else {
+            //Настоящий луз
+//            self.dimAndStopPlay(withRecord: <#T##Int#>)
         }
     }
     
     //Используется при проигрыше или выигрыше
-    private func startNewRound() {
+    /*private*/ func startNewRound() {
         
         self.gameStatus = .isStopped
         
@@ -325,7 +336,38 @@ class PlayFieldViewController: UIViewController {
         }
     }
     
+    //Метод - место для программного создания и конфигурации views
+    private func setupViews() {
+        
+        //dimView init
+        dimView = UIView.init(frame: self.view.frame)
+        dimView.backgroundColor = .black
+        //Потом сильнее проясню цвет
+        dimView.alpha = 0.3
+        
+        //startButton init
+        startButton = UIButton.init()
+        startButton.frame.size = CGSize.init(width: dimView.frame.size.width * 0.74, height: 54)
+        startButton.center = dimView.center
+        startButton.setTitle("Старт!", for: .normal)
+        startButton.titleLabel!.font = startButton.titleLabel!.font.withSize(24)
+        startButton.backgroundColor = #colorLiteral(red: 0.9583352208, green: 0.8847941756, blue: 0.2802580595, alpha: 1)
+        startButton.alpha = 0.3
+        startButton.addTarget(self, action: #selector(self.startButtonTapped(sender:)), for: UIControlEvents.touchUpInside)
+        startButton.clipsToBounds = true
+        startButton.layer.cornerRadius = 8
+        
+    }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier! {
+        case "presentModallyDimViewControllerIdentifier":
+            let dvc = segue.destination as! DimViewController
+            dvc.primeViewController = self
+        default:
+            fatalError("промазал")
+        }
+    }
     
 }
 

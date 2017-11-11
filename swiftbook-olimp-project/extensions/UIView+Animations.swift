@@ -39,7 +39,7 @@ extension UIView {
     }
     
     private func darken(withColor color: UIColor, animationDuration: TimeInterval, completion: @escaping (Bool) -> Void = { (_) in }) {
-        UIView.animate(withDuration: animationDuration, animations: { 
+        UIView.animate(withDuration: animationDuration, delay: 0, options: [.beginFromCurrentState], animations: { 
             
             self.backgroundColor = color
             self.alpha = dimAlphaConstant
