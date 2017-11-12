@@ -33,11 +33,8 @@ class DimViewController: UIViewController {
         
         
         
-        
-        
         //Если так, то нужно посмотреть, не появился ли новый рекорд
         if context == .gameOver {
-            
             
             print("\(primeViewController.score) is record? \(primeViewController.score.isRecord())")
             
@@ -66,7 +63,7 @@ class DimViewController: UIViewController {
 //        self.view.alpha = 0
         self.dimView.alpha = 0
         self.startButton.alpha = 0
-        
+        self.newRecordBackgroundView.alpha = 0
 //        UIView.animate(withDuration: 0.3 * 0.3 , animations: { 
 ////            self.view.alpha = 0.3
 //            self.dimView.alpha = 0.3
@@ -104,11 +101,16 @@ class DimViewController: UIViewController {
         UIView.animate(withDuration: 0.3, animations: { 
             self.dimView.alpha = 0
             self.startButton.alpha = 0
+            self.newRecordBackgroundView.alpha = 0
         }) { (bool) in
             self.dismiss(animated: false, completion: nil)
         }
         
-        //Начало ногого раунда
+        //Начало новой игры
+        self.primeViewController.score = 0
+        self.primeViewController.scoreLabel.text = "0"
+        self.primeViewController.life = 3
+        self.primeViewController.lifeLabel.text = "3"
         self.primeViewController.startNewRound()
         
     }
