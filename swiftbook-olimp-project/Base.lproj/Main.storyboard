@@ -114,6 +114,14 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Er-Ly-xef">
+                                <rect key="frame" x="210" y="132" width="33" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Тест"/>
+                                <connections>
+                                    <action selector="testButtonTapped:" destination="dz5-XZ-7Av" eventType="touchUpInside" id="oxc-Kr-VsY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.19595640897750854" green="0.19613614678382874" blue="0.19598421454429626" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -128,7 +136,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hEE-fY-ngy"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Настройки" id="Oyz-qH-6gi"/>
+                    <tabBarItem key="tabBarItem" title="Настройки" image="фыва" id="Oyz-qH-6gi"/>
                     <connections>
                         <outlet property="numberOfBlinksLabel" destination="Pna-RU-80n" id="dCy-vY-x9g"/>
                         <outlet property="numberOfBlinksSlider" destination="15l-XM-Apu" id="0Aj-8A-1Xg"/>
@@ -425,7 +433,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hZT-wD-wnX"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Игра" id="8SM-hd-hfm"/>
+                    <tabBarItem key="tabBarItem" title="Игра" image="game_icon" id="8SM-hd-hfm"/>
                     <connections>
                         <outlet property="interactiveLabel" destination="fPi-mS-9dG" id="JKu-r1-mJC"/>
                         <outlet property="lifeLabel" destination="MPZ-EO-7bf" id="qQv-28-UTI"/>
@@ -638,16 +646,19 @@
             </objects>
             <point key="canvasLocation" x="-718" y="-249"/>
         </scene>
-        <!--Item-->
+        <!--Рекорды-->
         <scene sceneID="HUy-Da-S54">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tuF-9D-8RO" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="lAk-2F-6Q2"/>
+                    <tabBarItem key="tabBarItem" title="Рекорды" image="records_icon" id="lAk-2F-6Q2"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dZu-q7-BUI">
                         <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.195956409" green="0.19613614679999999" blue="0.1959842145" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -660,9 +671,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="game_icon" width="20" height="20"/>
         <image name="heart" width="56" height="56"/>
+        <image name="records_icon" width="20" height="20"/>
         <image name="reload" width="512" height="512"/>
         <image name="swiftcoin_score" width="56" height="56"/>
+        <image name="фыва" width="20" height="20"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="wOL-wt-Thh"/>

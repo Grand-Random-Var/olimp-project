@@ -18,7 +18,7 @@ class RecordsViewController: UIViewController {
         super.viewDidLoad()
         
         tableView.tableFooterView = UIView.init(frame: CGRect.zero)
-        
+        tableView.allowsSelection = false
         
     }
     
