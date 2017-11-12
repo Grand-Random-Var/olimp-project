@@ -14,16 +14,18 @@ import RealmSwift
 let realm = try! Realm()
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegate {
     
     var window: UIWindow?
     
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
+        UIApplication.shared.statusBarStyle = .lightContent
+        UIApplication.shared.isStatusBarHidden = false
         //Эта строчка для того, чтобы при запуске по дефолту выбирался центральный viewController с кликами
         (window!.rootViewController as? UITabBarController)?.selectedIndex = 1
-        
+        (window!.rootViewController as? UITabBarController)?.delegate = self
         
         
         
@@ -31,6 +33,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return true
     }
+    
+    
+//    private index
+    
+    //MARK TabBarController delegate
+    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
+        if !(viewController is PlayFieldViewController) {
+            print("хочешь кликнуть на другой")
+            return false
+        } else {
+            print("зачем кликать на тот же?")
+            return true
+        }
+    }
+    
     
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
