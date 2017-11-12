@@ -31,23 +31,29 @@ class DimViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        if context != nil {
-//            print("hello!1!")
-//        }
+        
+        
+        
         
         //Если так, то нужно посмотреть, не появился ли новый рекорд
         if context == .gameOver {
             
-            primeViewController.score.putToRecordsIfItIs()
+            
+            print("\(primeViewController.score) is record? \(primeViewController.score.isRecord())")
             
             if primeViewController.score.isRecord() {
                 self.newRecordLabel.text = "\(primeViewController.score)"
                 self.newRecordBackgroundView.isHidden = false
+            } else {
+                self.newRecordBackgroundView.isHidden = true
             }
-            
         } else {
             self.newRecordBackgroundView.isHidden = true
         }
+        
+        
+        //Обновлять дату только после определения, рекордили нет
+        primeViewController.score.putToRecordsIfItIs()
         
         
         self.setupViews()
@@ -74,6 +80,7 @@ class DimViewController: UIViewController {
             //            self.view.alpha = 0.3
             self.dimView.alpha = 0.3
             self.startButton.alpha = 1
+            self.newRecordBackgroundView.alpha = 1
         })
         
         

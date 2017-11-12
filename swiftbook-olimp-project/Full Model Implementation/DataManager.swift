@@ -112,7 +112,7 @@ extension Int {
         return false
     }
     
-    func putToRecordsIfItIs() -> Bool {
+    func putToRecordsIfItIs() {
         
         let recordsArray = dataManager.records.sorted(by: < )
         
@@ -126,6 +126,5 @@ extension Int {
             }
         }
         
-        return true
     }
 }

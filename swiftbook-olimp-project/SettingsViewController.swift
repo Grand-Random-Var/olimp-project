@@ -14,6 +14,7 @@ import UIKit
 class SettingsViewController: UIViewController {
     
     
+    
     @IBOutlet weak var numberOfBlinksLabel: UILabel!
     @IBOutlet weak var numberOfBlinksSlider: UISlider!
     
@@ -23,17 +24,34 @@ class SettingsViewController: UIViewController {
     
     let constSpeedValues = [1.2, 1, 0.8, 0.7, 0.6, 0.5, 0.4, 0.3, 0.2, 0.1]
     
-    override func viewWillAppear(_ animated: Bool) {
-        self.numberOfBlinksLabel.text = "\(Int(round((Double(dataManager.settings.numberOfBlinks) - 3)/7)))"
-        self.numberOfBlinksSlider.value = round(Float(self.numberOfBlinksLabel.text!)!)
+    override func viewDidLoad() {
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        
+        self.numberOfBlinksLabel.text = "\(dataManager.settings.numberOfBlinks)"
+        
+        print("slider blinks value : \((Float(dataManager.settings.numberOfBlinks) - 3) / Float(6))")
+        let value: Float = Float((Float(dataManager.settings.numberOfBlinks) - 3) / Float(6))
+        
+        print("privat evalue: \(value)")
+        
+        self.numberOfBlinksSlider.value = value
+        
+        print("setted value : \(self.numberOfBlinksSlider.value)")
+        
+        
+        
+        //set speed configs
         mark: for (index,value) in constSpeedValues.enumerated() {
             if dataManager.settings.blinkDuration == value {
                 self.speedLabel.text = "\(index + 1)"
+                self.speedSlider.value = Float(index)/10
                 break mark
             }
         }
-        self.speedSlider.value = (round(Float(self.speedLabel.text!)!))
         
     }
     
@@ -72,5 +90,12 @@ class SettingsViewController: UIViewController {
     }
     
     
+    
+    
+    @IBAction func testButtonTapped(_ sender: UIButton) {
+        
+        self.numberOfBlinksSlider.value = 0.166667
+        
+    }
     
 }

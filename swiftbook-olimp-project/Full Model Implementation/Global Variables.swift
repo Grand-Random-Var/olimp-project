@@ -23,7 +23,7 @@ var dataManager = DataManager.shared
 let defaultSettings = Settings.init(withNumberOfBlinks: 4, blinkDuration: 0.5)
 
 let defaultRecords: [Record] = [
-    Record.init(value: 20000, name: "Бриарей"),
+//    Record.init(value: 20000, name: "Бриарей"),
     Record.init(value: 15000, name: "Мери"),
     Record.init(value: 10000, name: "Глория"),
     Record.init(value: 7000, name: "Майкл"),
@@ -32,7 +32,9 @@ let defaultRecords: [Record] = [
     Record.init(value: 3000, name: "Бен"),
     Record.init(value: 2000, name: "Мария"),
     Record.init(value: 1000, name: "Джон"),
-    Record.init(value: 500, name: "Кристина")
+    Record.init(value: 500, name: "Кристина"),
+    Record.init(value: 100, name: "Арсений")
+    
 ]
 
 let delayBeforePlayingCombination = 1.6
@@ -48,7 +50,7 @@ func scorePerWin(withSettings inputSettings: Settings) -> Int {
 //    let inputSettings = Settings.init(withNumberOfBlinks: numberOfBlinks, blinkDuration: blinkDuration)
     
     
-    var floatScore: Double = Double(inputSettings.numberOfBlinks * 10)
+    var floatScore: Double = Double(inputSettings.numberOfBlinks * 11)
     
 //    var multiplier: Double = 0
     
