@@ -197,6 +197,7 @@ class PlayFieldViewController: UIViewController {
         
 //        self.win()
         
+//        print("settings: \(dataManager.settings)")
         
         self.performSegue(withIdentifier: "reloadPresentDimViewControllerIdentifier", sender: nil)
         

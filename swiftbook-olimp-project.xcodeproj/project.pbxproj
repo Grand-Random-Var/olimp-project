@@ -62,23 +62,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1F405A391FB709C100FA5EA1 /* Records */ = {
+		1F405A391FB709C100FA5EA1 /* Records Scene */ = {
 			isa = PBXGroup;
 			children = (
 				ED65797F1FB703D70027313B /* RecordsViewController.swift */,
 				1F405A3A1FB70B7500FA5EA1 /* RecordsDataSource.swift */,
 				ED821EC91FB7E01100E91E53 /* RecordTableViewCell.swift */,
 			);
-			path = Records;
+			path = "Records Scene";
 			sourceTree = "<group>";
 		};
-		1F405A3C1FB7211100FA5EA1 /* Game */ = {
+		1F405A3C1FB7211100FA5EA1 /* Game Scene */ = {
 			isa = PBXGroup;
 			children = (
 				EDA544A01FB64998005276E5 /* PlayFieldViewController.swift */,
 				1F405A3D1FB7220E00FA5EA1 /* DimViewController.swift */,
 			);
-			path = Game;
+			path = "Game Scene";
 			sourceTree = "<group>";
 		};
 		1F405A3F1FB73B1E00FA5EA1 /* extensions */ = {
@@ -147,8 +147,8 @@
 			children = (
 				EDBC61521FB22E1800A05899 /* AppDelegate.swift */,
 				ED65797D1FB703AF0027313B /* SettingsViewController.swift */,
-				1F405A3C1FB7211100FA5EA1 /* Game */,
-				1F405A391FB709C100FA5EA1 /* Records */,
+				1F405A3C1FB7211100FA5EA1 /* Game Scene */,
+				1F405A391FB709C100FA5EA1 /* Records Scene */,
 				EDBC61561FB22E1800A05899 /* Main.storyboard */,
 				ED65797A1FB6F6740027313B /* RoundedView */,
 				EDAC3A931FB676D200888ED6 /* Full Model Implementation */,

@@ -21,6 +21,22 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var speedSlider: UISlider!
     @IBOutlet weak var scorePerWinLabel: UILabel!
     
+    let constSpeedValues = [1.2, 1, 0.8, 0.7, 0.6, 0.5, 0.4, 0.3, 0.2, 0.1]
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.numberOfBlinksLabel.text = "\(Int(round((Double(dataManager.settings.numberOfBlinks) - 3)/7)))"
+        self.numberOfBlinksSlider.value = round(Float(self.numberOfBlinksLabel.text!)!)
+        
+        mark: for (index,value) in constSpeedValues.enumerated() {
+            if dataManager.settings.blinkDuration == value {
+                self.speedLabel.text = "\(index + 1)"
+                break mark
+            }
+        }
+        self.speedSlider.value = (round(Float(self.speedLabel.text!)!))
+        
+    }
+    
     @IBAction func numberOfBlinksSliderValueChanged(_ sender: UISlider) {
         
         var rounded = Int(sender.value * 7) + 3
@@ -29,7 +45,11 @@ class SettingsViewController: UIViewController {
         
         self.numberOfBlinksLabel.text = "\(rounded)"
         
-        dataManager.settings.numberOfBlinks = rounded
+        try! realm.write {
+            dataManager.settings.numberOfBlinks = rounded
+        }
+        
+        scorePerWinLabel.text = "\(scorePerWin(withSettings: dataManager.settings))"
         
     }
     
@@ -39,11 +59,13 @@ class SettingsViewController: UIViewController {
         
         if rounded >= 11 { rounded = 10 }
         
-        let constValues = [1.2, 1, 0.8, 0.7, 0.6, 0.5, 0.4, 0.3, 0.2, 0.1]
+        
         
         self.speedLabel.text = "\(rounded)"
         
-        dataManager.settings.blinkDuration = constValues[rounded - 1]
+        try! realm.write {
+            dataManager.settings.blinkDuration = constSpeedValues[rounded - 1]
+        }
         
         scorePerWinLabel.text = "\(scorePerWin(withSettings: dataManager.settings))"
         

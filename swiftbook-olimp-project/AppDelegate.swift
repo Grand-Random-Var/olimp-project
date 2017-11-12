@@ -8,6 +8,10 @@
 
 import UIKit
 import CoreData
+import RealmSwift
+
+
+let realm = try! Realm()
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,7 +24,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //Эта строчка для того, чтобы при запуске по дефолту выбирался центральный viewController с кликами
         (window!.rootViewController as? UITabBarController)?.selectedIndex = 1
         
-//        (window!.rootViewController as! UITabBarController).tabBar.tintColor = UIColor.white
+        
+        
+        
+        
         
         return true
     }

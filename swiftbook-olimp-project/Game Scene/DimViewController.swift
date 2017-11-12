@@ -16,7 +16,7 @@ class DimViewController: UIViewController {
     var primeViewController: PlayFieldViewController!
     
     //Outlet'ы для новоо рекорда
-    @IBOutlet weak var newRecordStackView: UIStackView!
+    @IBOutlet weak var newRecordBackgroundView: RoundedView!
     @IBOutlet weak var newRecordLabel: UILabel!
     
     
@@ -38,6 +38,15 @@ class DimViewController: UIViewController {
         //Если так, то нужно посмотреть, не появился ли новый рекорд
         if context == .gameOver {
             
+            primeViewController.score.putToRecordsIfItIs()
+            
+            if primeViewController.score.isRecord() {
+                self.newRecordLabel.text = "\(primeViewController.score)"
+                self.newRecordBackgroundView.isHidden = false
+            }
+            
+        } else {
+            self.newRecordBackgroundView.isHidden = true
         }
         
         

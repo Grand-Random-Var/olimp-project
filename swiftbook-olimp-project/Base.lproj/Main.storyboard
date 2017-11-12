@@ -459,18 +459,22 @@
                         <subviews>
                             <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sAM-3d-wGn">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t1c-9c-uNd" customClass="RoundedView" customModule="swiftbook_olimp_project" customModuleProvider="target">
+                                <rect key="frame" x="77" y="135.5" width="166.5" height="70"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Bs6-So-3in">
-                                        <rect key="frame" x="85" y="114" width="150.5" height="56"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="c7Q-5J-cqe">
+                                        <rect key="frame" x="8" y="8" width="150.5" height="58"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Новый рекорд!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gAx-Vf-XwE">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Новый рекорд!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W7I-It-FeL">
                                                 <rect key="frame" x="0.0" y="0.0" width="150.5" height="22.5"/>
                                                 <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="20"/>
                                                 <color key="textColor" red="0.99019607840000001" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2553" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7MF-CL-C1r">
-                                                <rect key="frame" x="0.0" y="26.5" width="150.5" height="29.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2553" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zZY-Ed-Qv0">
+                                                <rect key="frame" x="0.0" y="28.5" width="150.5" height="29.5"/>
                                                 <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="26"/>
                                                 <color key="textColor" red="0.99019607840000001" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -478,11 +482,18 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.9583352208" green="0.88479417559999995" blue="0.28025805949999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="Bs6-So-3in" firstAttribute="centerX" secondItem="sAM-3d-wGn" secondAttribute="centerX" id="jhP-dz-IiB"/>
-                                    <constraint firstItem="Bs6-So-3in" firstAttribute="centerY" secondItem="sAM-3d-wGn" secondAttribute="centerY" multiplier="0.5" id="xyJ-ac-vSJ"/>
+                                    <constraint firstItem="c7Q-5J-cqe" firstAttribute="top" secondItem="t1c-9c-uNd" secondAttribute="top" constant="8" id="AjZ-44-XH5"/>
+                                    <constraint firstAttribute="bottom" secondItem="c7Q-5J-cqe" secondAttribute="bottom" constant="4" id="D7B-6l-8K2"/>
+                                    <constraint firstAttribute="trailing" secondItem="c7Q-5J-cqe" secondAttribute="trailing" constant="8" id="n4n-7B-upS"/>
+                                    <constraint firstItem="c7Q-5J-cqe" firstAttribute="leading" secondItem="t1c-9c-uNd" secondAttribute="leading" constant="8" id="nAI-yq-3o0"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="theCornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nrG-Gc-NKJ" customClass="RoundedButton" customModule="swiftbook_olimp_project" customModuleProvider="target">
                                 <rect key="frame" x="41.5" y="257" width="237" height="54"/>
@@ -504,18 +515,20 @@
                         <constraints>
                             <constraint firstItem="sAM-3d-wGn" firstAttribute="top" secondItem="oxs-p5-k07" secondAttribute="top" id="9Y5-qQ-ln6"/>
                             <constraint firstItem="nrG-Gc-NKJ" firstAttribute="centerX" secondItem="oxs-p5-k07" secondAttribute="centerX" id="YnK-Qr-5lE"/>
+                            <constraint firstItem="t1c-9c-uNd" firstAttribute="centerY" secondItem="oxs-p5-k07" secondAttribute="centerY" multiplier="0.6" id="gyi-E9-PYS"/>
                             <constraint firstItem="nrG-Gc-NKJ" firstAttribute="centerY" secondItem="oxs-p5-k07" secondAttribute="centerY" id="h04-AH-7Ty"/>
                             <constraint firstItem="nrG-Gc-NKJ" firstAttribute="width" secondItem="sAM-3d-wGn" secondAttribute="width" multiplier="0.74" id="jVA-VQ-4vm"/>
                             <constraint firstItem="sAM-3d-wGn" firstAttribute="trailing" secondItem="Vwe-y5-yQI" secondAttribute="trailing" id="nzA-TK-ggJ"/>
                             <constraint firstItem="sAM-3d-wGn" firstAttribute="leading" secondItem="Vwe-y5-yQI" secondAttribute="leading" id="pbh-c5-vc4"/>
+                            <constraint firstItem="t1c-9c-uNd" firstAttribute="centerX" secondItem="oxs-p5-k07" secondAttribute="centerX" id="xgC-Mk-K8T"/>
                             <constraint firstItem="sAM-3d-wGn" firstAttribute="bottom" secondItem="Vwe-y5-yQI" secondAttribute="bottom" id="ziR-vQ-ecE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Vwe-y5-yQI"/>
                     </view>
                     <connections>
                         <outlet property="dimView" destination="sAM-3d-wGn" id="5pk-OP-ynk"/>
-                        <outlet property="newRecordLabel" destination="7MF-CL-C1r" id="CQC-3v-PQH"/>
-                        <outlet property="newRecordStackView" destination="Bs6-So-3in" id="DYB-LU-uq0"/>
+                        <outlet property="newRecordBackgroundView" destination="t1c-9c-uNd" id="xIX-n9-nGw"/>
+                        <outlet property="newRecordLabel" destination="zZY-Ed-Qv0" id="rJq-Tu-7XG"/>
                         <outlet property="startButton" destination="nrG-Gc-NKJ" id="oKE-5F-3bA"/>
                     </connections>
                 </viewController>
@@ -543,22 +556,22 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J4V-5l-RBi">
-                                                    <rect key="frame" x="8" y="9" width="28" height="27"/>
+                                                    <rect key="frame" x="8" y="9" width="34" height="27"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="28" id="lch-E1-2V5"/>
+                                                        <constraint firstAttribute="width" constant="34" id="lch-E1-2V5"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="24"/>
                                                     <color key="textColor" red="0.99019607840000001" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2547" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k8M-pg-vNB">
-                                                    <rect key="frame" x="261" y="11" width="47" height="23"/>
+                                                    <rect key="frame" x="253" y="10" width="47" height="23.5"/>
                                                     <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="21"/>
                                                     <color key="textColor" red="0.99019607840000001" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Глеб Калачев" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="54S-Yd-sWF">
-                                                    <rect key="frame" x="52" y="12.5" width="120.5" height="21.5"/>
+                                                    <rect key="frame" x="58" y="12.5" width="120.5" height="21.5"/>
                                                     <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="19"/>
                                                     <color key="textColor" red="0.99019607840000001" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -571,7 +584,7 @@
                                                 <constraint firstItem="k8M-pg-vNB" firstAttribute="centerY" secondItem="SB1-TY-LK1" secondAttribute="centerY" id="VqT-gW-fa3"/>
                                                 <constraint firstItem="J4V-5l-RBi" firstAttribute="centerY" secondItem="SB1-TY-LK1" secondAttribute="centerY" id="b0p-1q-jrg"/>
                                                 <constraint firstItem="54S-Yd-sWF" firstAttribute="leading" secondItem="J4V-5l-RBi" secondAttribute="trailing" constant="16" id="fTd-qj-fnM"/>
-                                                <constraint firstAttribute="trailing" secondItem="k8M-pg-vNB" secondAttribute="trailing" constant="12" id="jEw-iz-yqY"/>
+                                                <constraint firstAttribute="trailing" secondItem="k8M-pg-vNB" secondAttribute="trailing" constant="20" id="jEw-iz-yqY"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
