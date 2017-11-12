@@ -41,9 +41,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
     func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
         if !(viewController is PlayFieldViewController) {
             print("хочешь кликнуть на другой")
-            return false
+            
+            let selectedVC = ((window!.rootViewController as? UITabBarController)?.selectedViewController as? PlayFieldViewController)
+            
+            selectedVC?.score.putToRecordsIfItIs()
+            selectedVC?.gameStatus = .isStopped
+            
+            selectedVC?.score = 0
+            selectedVC?.scoreLabel.text = "0"
+            selectedVC?.life = 3
+            selectedVC?.lifeLabel.text = "3"
+            
+            return true
         } else {
-            print("зачем кликать на тот же?")
+            
+            
+            
+            guard let playVC = viewController as? PlayFieldViewController else {
+                fatalError()
+            }
+            
+            guard playVC != (window!.rootViewController as? UITabBarController)?.selectedViewController else {
+                return true
+            }
+            
+            playVC.performSegue(withIdentifier: "tabBarPickedPresentWithoutAnimationIdentifier", sender: self)
+            
             return true
         }
     }

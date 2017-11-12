@@ -359,6 +359,10 @@ class PlayFieldViewController: UIViewController {
             let dvc = segue.destination as! DimViewController
             dvc.primeViewController = self
             dvc.context = DimViewController.Context.reload
+        case "tabBarPickedPresentWithoutAnimationIdentifier":
+            let dvc = segue.destination as! DimViewController
+            dvc.primeViewController = self
+            dvc.context = DimViewController.Context.tabBared
             
         default:
             fatalError("промазал")

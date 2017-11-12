@@ -24,7 +24,7 @@ class DimViewController: UIViewController {
     @IBOutlet weak var startButton: UIButton!
     
     enum Context {
-        case firstLaunch, start, reload, gameOver
+        case firstLaunch, start, reload, gameOver, tabBared
     }
     var context: Context!
     
@@ -73,12 +73,21 @@ class DimViewController: UIViewController {
 //                self.startButton.alpha = 1
 //            })
 //        }
-        UIView.animate(withDuration: 0.3 , animations: { 
-            //            self.view.alpha = 0.3
+        
+        
+        //Если переключился с tabbar'a, то без анимации
+        if self.context == DimViewController.Context.tabBared {
             self.dimView.alpha = 0.3
             self.startButton.alpha = 1
             self.newRecordBackgroundView.alpha = 1
-        })
+        } else {
+            UIView.animate(withDuration: 0.3 , animations: { 
+                //            self.view.alpha = 0.3
+                self.dimView.alpha = 0.3
+                self.startButton.alpha = 1
+                self.newRecordBackgroundView.alpha = 1
+            })
+        }
         
         
     }
@@ -114,6 +123,20 @@ class DimViewController: UIViewController {
         self.primeViewController.startNewRound()
         
     }
+    
+    @IBAction func tabBarSimulatorSettingsItemTapped(_ sender: UIButton) {
+        
+        ((UIApplication.shared.delegate as? AppDelegate)?.window?.rootViewController as? UITabBarController)?.selectedIndex = 0
+        
+        self.dismiss(animated: false, completion: nil)
+        
+    }
+    
+    @IBAction func tabBarSimualtorRecordsItemTapped(_ sender: UIButton) {
+        ((UIApplication.shared.delegate as? AppDelegate)?.window?.rootViewController as? UITabBarController)?.selectedIndex = 2
+        self.dismiss(animated: false, completion: nil)
+    }
+    
     
     deinit {
         print("dim deinitialized")

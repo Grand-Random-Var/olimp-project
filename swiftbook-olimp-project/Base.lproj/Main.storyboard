@@ -455,7 +455,7 @@
                         <segue destination="tx9-Ok-VrN" kind="presentation" identifier="firstLaunchPresentDimViewControlletIdentifier" animates="NO" modalPresentationStyle="overFullScreen" id="wOL-wt-Thh"/>
                         <segue destination="tx9-Ok-VrN" kind="presentation" identifier="gameOverPresentDimViewControllerIdentifier" animates="NO" modalPresentationStyle="overCurrentContext" id="32X-fz-fNu"/>
                         <segue destination="tx9-Ok-VrN" kind="presentation" identifier="reloadPresentDimViewControllerIdentifier" animates="NO" modalPresentationStyle="overCurrentContext" id="poG-Ya-OLj"/>
-                        <segue destination="tx9-Ok-VrN" kind="presentation" animates="NO" modalPresentationStyle="overCurrentContext" id="k9n-5O-dzC"/>
+                        <segue destination="tx9-Ok-VrN" kind="presentation" identifier="tabBarPickedPresentWithoutAnimationIdentifier" animates="NO" modalPresentationStyle="overCurrentContext" id="k9n-5O-dzC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Blj-vK-76r" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -472,7 +472,37 @@
                         <subviews>
                             <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sAM-3d-wGn">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="1fN-sV-qvT">
+                                        <rect key="frame" x="0.0" y="518" width="320" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c1d-p3-nT8">
+                                                <rect key="frame" x="0.0" y="0.0" width="106.5" height="50"/>
+                                                <connections>
+                                                    <action selector="tabBarSimulatorSettingsItemTapped:" destination="tx9-Ok-VrN" eventType="touchUpInside" id="SzF-bl-dyR"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HkN-Y4-O5T">
+                                                <rect key="frame" x="106.5" y="0.0" width="107" height="50"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RVX-zb-0KN">
+                                                <rect key="frame" x="213.5" y="0.0" width="106.5" height="50"/>
+                                                <connections>
+                                                    <action selector="tabBarSimualtorRecordsItemTapped:" destination="tx9-Ok-VrN" eventType="touchUpInside" id="Ycm-mC-QHy"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="QZd-yE-9Ia"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="1fN-sV-qvT" firstAttribute="leading" secondItem="sAM-3d-wGn" secondAttribute="leading" id="6Jd-nC-DBB"/>
+                                    <constraint firstAttribute="trailing" secondItem="1fN-sV-qvT" secondAttribute="trailing" id="9GN-Vb-bbX"/>
+                                    <constraint firstAttribute="bottom" secondItem="1fN-sV-qvT" secondAttribute="bottom" id="o6e-Th-mfg"/>
+                                </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t1c-9c-uNd" customClass="RoundedView" customModule="swiftbook_olimp_project" customModuleProvider="target">
                                 <rect key="frame" x="77" y="135.5" width="166.5" height="70"/>
@@ -538,6 +568,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Vwe-y5-yQI"/>
                     </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="dimView" destination="sAM-3d-wGn" id="5pk-OP-ynk"/>
                         <outlet property="newRecordBackgroundView" destination="t1c-9c-uNd" id="xIX-n9-nGw"/>
@@ -685,6 +716,6 @@
         <image name="фыва" width="20" height="20"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="wOL-wt-Thh"/>
+        <segue reference="k9n-5O-dzC"/>
     </inferredMetricsTieBreakers>
 </document>
