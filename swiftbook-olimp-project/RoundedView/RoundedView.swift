@@ -9,21 +9,24 @@
 import UIKit
 import Foundation
 @IBDesignable class RoundedView: UIView {
-
-   
-   
-   
-   @IBInspectable var theCornerRadius: CGFloat {
-      get {
-//         self.clipsToBounds = true
-         return self.layer.cornerRadius
-      }
-      set {
-//         self.clipsToBounds = true
-         self.layer.cornerRadius = newValue
-      }
-   }
-   override func awakeFromNib() {
-      self.clipsToBounds = true
-   }
+    
+    
+    
+    
+    @IBInspectable var theCornerRadius: CGFloat {
+        get {
+            //         self.clipsToBounds = true
+            return self.layer.cornerRadius
+        }
+        set {
+            //         self.clipsToBounds = true
+            self.layer.cornerRadius = newValue
+        }
+    }
+    
+    override func awakeFromNib() {
+        self.clipsToBounds = true
+    }
+    
+    
 }

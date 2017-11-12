@@ -10,11 +10,13 @@
 		1F405A3B1FB70B7500FA5EA1 /* RecordsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F405A3A1FB70B7500FA5EA1 /* RecordsDataSource.swift */; };
 		1F405A3E1FB7220E00FA5EA1 /* DimViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F405A3D1FB7220E00FA5EA1 /* DimViewController.swift */; };
 		1FE0A1991FB654B50072DB33 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE0A1981FB654B50072DB33 /* DataManager.swift */; };
+		4CA37CF4905E1C0AAF1FB358 /* Pods_swiftbook_olimp_project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E91956D0DF379B066C7DD095 /* Pods_swiftbook_olimp_project.framework */; };
 		ED6579781FB6F6710027313B /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6579761FB6F6700027313B /* RoundedButton.swift */; };
 		ED6579791FB6F6710027313B /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6579771FB6F6700027313B /* RoundedView.swift */; };
 		ED65797C1FB6F9940027313B /* UIView+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED65797B1FB6F9940027313B /* UIView+Animations.swift */; };
 		ED65797E1FB703AF0027313B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED65797D1FB703AF0027313B /* SettingsViewController.swift */; };
 		ED6579801FB703D70027313B /* RecordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED65797F1FB703D70027313B /* RecordsViewController.swift */; };
+		ED821ECA1FB7E01100E91E53 /* RecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED821EC91FB7E01100E91E53 /* RecordTableViewCell.swift */; };
 		EDA544A11FB64998005276E5 /* PlayFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA544A01FB64998005276E5 /* PlayFieldViewController.swift */; };
 		EDAC3A951FB6779200888ED6 /* Global Variables.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAC3A941FB6779200888ED6 /* Global Variables.swift */; };
 		EDBC61531FB22E1800A05899 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBC61521FB22E1800A05899 /* AppDelegate.swift */; };
@@ -25,14 +27,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0ACF293C5DABD23F8E300CE8 /* Pods-swiftbook-olimp-project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftbook-olimp-project.release.xcconfig"; path = "Pods/Target Support Files/Pods-swiftbook-olimp-project/Pods-swiftbook-olimp-project.release.xcconfig"; sourceTree = "<group>"; };
+		1C3DAE8BA59BC7FC0EFD0FA7 /* Pods-swiftbook-olimp-project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftbook-olimp-project.debug.xcconfig"; path = "Pods/Target Support Files/Pods-swiftbook-olimp-project/Pods-swiftbook-olimp-project.debug.xcconfig"; sourceTree = "<group>"; };
 		1F405A3A1FB70B7500FA5EA1 /* RecordsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsDataSource.swift; sourceTree = "<group>"; };
 		1F405A3D1FB7220E00FA5EA1 /* DimViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DimViewController.swift; sourceTree = "<group>"; };
 		1FE0A1981FB654B50072DB33 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		E91956D0DF379B066C7DD095 /* Pods_swiftbook_olimp_project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swiftbook_olimp_project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED6579761FB6F6700027313B /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		ED6579771FB6F6700027313B /* RoundedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
 		ED65797B1FB6F9940027313B /* UIView+Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Animations.swift"; sourceTree = "<group>"; };
 		ED65797D1FB703AF0027313B /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		ED65797F1FB703D70027313B /* RecordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsViewController.swift; sourceTree = "<group>"; };
+		ED821EC91FB7E01100E91E53 /* RecordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTableViewCell.swift; sourceTree = "<group>"; };
 		EDA544A01FB64998005276E5 /* PlayFieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayFieldViewController.swift; sourceTree = "<group>"; };
 		EDAC3A941FB6779200888ED6 /* Global Variables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Global Variables.swift"; sourceTree = "<group>"; };
 		EDBC614F1FB22E1800A05899 /* swiftbook-olimp-project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swiftbook-olimp-project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,28 +55,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CA37CF4905E1C0AAF1FB358 /* Pods_swiftbook_olimp_project.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1F405A391FB709C100FA5EA1 /* Records */ = {
+		1F405A391FB709C100FA5EA1 /* Records Scene */ = {
 			isa = PBXGroup;
 			children = (
 				ED65797F1FB703D70027313B /* RecordsViewController.swift */,
 				1F405A3A1FB70B7500FA5EA1 /* RecordsDataSource.swift */,
+				ED821EC91FB7E01100E91E53 /* RecordTableViewCell.swift */,
 			);
-			path = Records;
+			path = "Records Scene";
 			sourceTree = "<group>";
 		};
-		1F405A3C1FB7211100FA5EA1 /* Game */ = {
+		1F405A3C1FB7211100FA5EA1 /* Game Scene */ = {
 			isa = PBXGroup;
 			children = (
 				EDA544A01FB64998005276E5 /* PlayFieldViewController.swift */,
 				1F405A3D1FB7220E00FA5EA1 /* DimViewController.swift */,
 			);
-			path = Game;
+			path = "Game Scene";
 			sourceTree = "<group>";
 		};
 		1F405A3F1FB73B1E00FA5EA1 /* extensions */ = {
@@ -79,6 +87,23 @@
 				ED65797B1FB6F9940027313B /* UIView+Animations.swift */,
 			);
 			path = extensions;
+			sourceTree = "<group>";
+		};
+		620B6ABC90EFE1B85F610C1D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E91956D0DF379B066C7DD095 /* Pods_swiftbook_olimp_project.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A2765C60DB5A32B44F2CECEF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1C3DAE8BA59BC7FC0EFD0FA7 /* Pods-swiftbook-olimp-project.debug.xcconfig */,
+				0ACF293C5DABD23F8E300CE8 /* Pods-swiftbook-olimp-project.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		ED65797A1FB6F6740027313B /* RoundedView */ = {
@@ -104,6 +129,8 @@
 			children = (
 				EDBC61511FB22E1800A05899 /* swiftbook-olimp-project */,
 				EDBC61501FB22E1800A05899 /* Products */,
+				A2765C60DB5A32B44F2CECEF /* Pods */,
+				620B6ABC90EFE1B85F610C1D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -120,8 +147,8 @@
 			children = (
 				EDBC61521FB22E1800A05899 /* AppDelegate.swift */,
 				ED65797D1FB703AF0027313B /* SettingsViewController.swift */,
-				1F405A3C1FB7211100FA5EA1 /* Game */,
-				1F405A391FB709C100FA5EA1 /* Records */,
+				1F405A3C1FB7211100FA5EA1 /* Game Scene */,
+				1F405A391FB709C100FA5EA1 /* Records Scene */,
 				EDBC61561FB22E1800A05899 /* Main.storyboard */,
 				ED65797A1FB6F6740027313B /* RoundedView */,
 				EDAC3A931FB676D200888ED6 /* Full Model Implementation */,
@@ -141,9 +168,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EDBC61641FB22E1800A05899 /* Build configuration list for PBXNativeTarget "swiftbook-olimp-project" */;
 			buildPhases = (
+				40D3A6CDF2618FDCD3CBAE04 /* [CP] Check Pods Manifest.lock */,
 				EDBC614B1FB22E1800A05899 /* Sources */,
 				EDBC614C1FB22E1800A05899 /* Frameworks */,
 				EDBC614D1FB22E1800A05899 /* Resources */,
+				2DF26AA0D5F1253C7CB0887B /* [CP] Embed Pods Frameworks */,
+				1387E611C44DA6278E2B1C10 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -201,6 +231,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1387E611C44DA6278E2B1C10 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-swiftbook-olimp-project/Pods-swiftbook-olimp-project-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2DF26AA0D5F1253C7CB0887B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-swiftbook-olimp-project/Pods-swiftbook-olimp-project-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-swiftbook-olimp-project/Pods-swiftbook-olimp-project-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		40D3A6CDF2618FDCD3CBAE04 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-swiftbook-olimp-project-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EDBC614B1FB22E1800A05899 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -210,6 +296,7 @@
 				EDA544A11FB64998005276E5 /* PlayFieldViewController.swift in Sources */,
 				ED65797C1FB6F9940027313B /* UIView+Animations.swift in Sources */,
 				1F405A3E1FB7220E00FA5EA1 /* DimViewController.swift in Sources */,
+				ED821ECA1FB7E01100E91E53 /* RecordTableViewCell.swift in Sources */,
 				ED65797E1FB703AF0027313B /* SettingsViewController.swift in Sources */,
 				ED6579781FB6F6710027313B /* RoundedButton.swift in Sources */,
 				EDBC61531FB22E1800A05899 /* AppDelegate.swift in Sources */,
@@ -352,6 +439,7 @@
 		};
 		EDBC61651FB22E1800A05899 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C3DAE8BA59BC7FC0EFD0FA7 /* Pods-swiftbook-olimp-project.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -367,6 +455,7 @@
 		};
 		EDBC61661FB22E1800A05899 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0ACF293C5DABD23F8E300CE8 /* Pods-swiftbook-olimp-project.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
