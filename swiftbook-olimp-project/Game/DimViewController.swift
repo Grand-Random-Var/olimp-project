@@ -15,11 +15,30 @@ class DimViewController: UIViewController {
     
     var primeViewController: PlayFieldViewController!
     
+    //Outlet'ы для новоо рекорда
+    @IBOutlet weak var newRecordStackView: UIStackView!
+    @IBOutlet weak var newRecordLabel: UILabel!
+    
+    
     @IBOutlet weak var dimView: UIView!
     @IBOutlet weak var startButton: UIButton!
     
+    enum Context {
+        case firstLaunch, start, reload, gameOver
+    }
+    var context: Context!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        if context != nil {
+//            print("hello!1!")
+//        }
+        
+        //Если так, то нужно посмотреть, не появился ли новый рекорд
+        if context == .gameOver {
+            
+        }
         
         
         self.setupViews()
@@ -55,8 +74,8 @@ class DimViewController: UIViewController {
         //dimView init
         
         //Потом сильнее проясню цвет
-        dimView.alpha = 0.3
-        startButton.alpha = 0.3
+//        dimView.alpha = 0.3
+//        startButton.alpha = 0.3
 
         startButton.addTarget(self, action: #selector(self.startButtonTapped(sender:)), for: UIControlEvents.touchUpInside)
         

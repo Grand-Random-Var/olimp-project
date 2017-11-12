@@ -19,11 +19,19 @@ struct DataKeys {
     static let settings = "settings"
 }
 
-struct Record {
+struct Record: Comparable {
+    static func <(lhs: Record, rhs: Record) -> Bool {
+        return lhs.value < rhs.value
+    }
+    
+    static func ==(lhs: Record, rhs: Record) -> Bool {
+        return lhs.value == lhs.value
+    }
+    
     let value: Int
     let name: String
+    
 }
-
 
 
 struct Settings {
@@ -35,30 +43,6 @@ struct Settings {
         self.blinkDuration = blinkDuration
     }
     
-//    init(fromDict dict: Dictionary<String,Any>) {
-//        self.numberOfBlinks = dict[DataKeys.numberOfBlinks]! as! Int
-//        self.blinkDuration = dict[DataKeys.blinkDuration]! as! TimeInterval
-//        
-//    }
-    
-//    func setNumberOfBlinks(value: Int) {
-//        UserDefaults.standard.set([DataKeys.blinkDuration: self.blinkDuration, DataKeys.numberOfBlinks: value], forKey: DataKeys.settings)
-//        
-//    }
-//    func setBlinkDuration(value: Int) {
-//        UserDefaults.standard.set([DataKeys.blinkDuration: value, DataKeys.numberOfBlinks: self.numberOfBlinks], forKey: DataKeys.settings)
-//    }
-    
-//    static func getSettings() -> Settings {
-//        let fetchedSettings = Settings.init(fromDict: UserDefaults.standard.value(forKey: DataKeys.settings)! as! Dictionary<String,Any>) 
-//        return fetchedSettings
-//    }
-//    static func save(settings: Settings) {
-//        var dict = Dictionary<String, Any>()
-//        dict[DataKeys.numberOfBlinks] = self.numberOfBlinks
-//        dict[DataKeys.blinkDuration] = self.blinkDuration
-//        UserDefaults.standard.set(dict, forKey: DataKeys.settings)
-//    }
 }
 
 class DataManager {
@@ -68,7 +52,12 @@ class DataManager {
     //Так как принял решение об одном глобальном dataManager'e, то shared нужен только для его инициализации
     
     var records: [Record] {
-        return UserDefaults.standard.value(forKey: DataKeys.records)! as! [Record]
+        get {
+            return UserDefaults.standard.value(forKey: DataKeys.records)! as! [Record]
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: DataKeys.records)
+        }
     }
     
     //Будет пока загружаться дефолт во viewDidLoad
@@ -85,8 +74,10 @@ class DataManager {
         self.settings = Settings.init(withNumberOfBlinks: 6, blinkDuration: 0.2)
         
         if UserDefaults.standard.value(forKey: DataKeys.records) as? [Record] == nil {
-            UserDefaults.standard.set(Array<Record>(), forKey: DataKeys.records)
-        }    
+            UserDefaults.standard.set(defaultRecords, forKey: DataKeys.records)
+        } 
+        
+        print("records in init: \(UserDefaults.standard.value(forKey: DataKeys.records))")
         
     }
     
@@ -101,19 +92,25 @@ class DataManager {
             return current.value > next.value
         }
         
-        for _ in 0 ... records.count - maxRecordsCount - 1 {
-            records.remove(at: records.count - 1)
-        }
+        
         
         UserDefaults.standard.set(records, forKey: DataKeys.records)
         
     }
     
     //Функция определяет, является ли набранный счет рекордным
-    func isRecord(_ value: Int) -> Bool {
+    func saveIfIsRecord(newResult: Record) -> Bool {
         
-        
-        
+        for i in 1..<20 {
+            if self.records[20 - i].value < newResult.value {
+                
+                
+                
+                records[19] = newResult
+                records.removeLast()
+                records.sort(by: > )
+            }
+        }
         
         return true
     }

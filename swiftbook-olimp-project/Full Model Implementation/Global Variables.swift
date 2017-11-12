@@ -20,6 +20,18 @@ var dataManager = DataManager.shared
 
 let defaultSettings = Settings.init(withNumberOfBlinks: 4, blinkDuration: 0.5)
 
+let defaultRecords: [Record] = [
+    Record.init(value: 20000, name: "John"),
+    Record.init(value: 15000, name: "John"),
+    Record.init(value: 10000, name: "John"),
+    Record.init(value: 7000, name: "John"),
+    Record.init(value: 5000, name: "John"),
+    Record.init(value: 4000, name: "John"),
+    Record.init(value: 3000, name: "John"),
+    Record.init(value: 2000, name: "John"),
+    Record.init(value: 1000, name: "John"),
+    Record.init(value: 500, name: "John")
+]
 
 let delayBeforePlayingCombination = 1.6
 let dimAlphaConstant: CGFloat = 0.5

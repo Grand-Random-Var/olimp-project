@@ -71,8 +71,6 @@ class PlayFieldViewController: UIViewController {
         print("settings: \(dataManager.settings)")
         print("score per win with dur: \(scorePerWin(withSettings: dataManager.settings))")
         
-        //Установка программных view
-        self.setupViews()
         
         for tile in self.tileButtons {
             tile.alpha = dimAlphaConstant
@@ -86,12 +84,18 @@ class PlayFieldViewController: UIViewController {
             tile.addTarget(self, action: #selector(self.aTileTouchUpOutside(sender:)), for: .touchUpOutside)
         }
         
-        self.dimAndShowStart()
+        DispatchQueue.main.async {
+            self.performSegue(withIdentifier: "firstLaunchPresentDimViewControlletIdentifier", sender: self)
+        }
         
         
         self.scoreLabel.text = "0"
         self.lifeLabel.text = "3"
         self.interactiveLabel.text = ""
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         
     }
     
@@ -194,7 +198,7 @@ class PlayFieldViewController: UIViewController {
 //        self.win()
         
         
-        self.performSegue(withIdentifier: "presentModallyDimViewControllerIdentifier", sender: nil)
+        self.performSegue(withIdentifier: "reloadPresentDimViewControllerIdentifier", sender: nil)
         
         
         
@@ -212,13 +216,14 @@ class PlayFieldViewController: UIViewController {
     
     
     
-    private var dimView: UIView!
-    private var startButton: UIButton!
-    
     private func dimAndShowStart() {
         
         self.gameStatus = .isShowingCombination
         
+        DispatchQueue.main.async {
+            self.performSegue(withIdentifier: "presentModallyDimViewControllerIdentifier", sender: self)
+            
+        }
 //        dimView = UIView.init(frame: self.view.frame)
 //        dimView.backgroundColor = .black
 //        //Потом сильнее проясню цвет
@@ -234,37 +239,37 @@ class PlayFieldViewController: UIViewController {
 //        startButton.addTarget(self, action: #selector(self.startButtonTapped(sender:)), for: UIControlEvents.touchUpInside)
 //        startButton.clipsToBounds = true
 //        startButton.layer.cornerRadius = 8
-        
-        
-        self.view.addSubview(dimView)
-        self.view.addSubview(startButton)
-        
-        
-        
-        UIView.animate(withDuration: 0.2, animations: { 
-            self.dimView.alpha = 0.5
-            self.startButton.alpha = 1.0
-        }) { (bool) in
-            //nothing
-        }
+//        
+//        
+//        self.view.addSubview(dimView)
+//        self.view.addSubview(startButton)
+//        
+//        
+//        
+//        UIView.animate(withDuration: 0.2, animations: { 
+//            self.dimView.alpha = 0.5
+//            self.startButton.alpha = 1.0
+//        }) { (bool) in
+//            //nothing
+//        }
         
         
     }
     
     
-    @objc func startButtonTapped(sender: UIButton) {
-        
-        //Анимация ичезновения dimView
-        UIView.animate(withDuration: 0.2, animations: { 
-            self.startButton.alpha = 0.3
-            self.dimView.alpha = 0.3
-        }) { (bool) in
-            self.startButton.isHidden = true
-            self.dimView.isHidden = true
-        }
-        
-        self.startNewRound()
-    }
+//    @objc func startButtonTapped(sender: UIButton) {
+//        
+//        //Анимация ичезновения dimView
+//        UIView.animate(withDuration: 0.2, animations: { 
+//            self.startButton.alpha = 0.3
+//            self.dimView.alpha = 0.3
+//        }) { (bool) in
+//            self.startButton.isHidden = true
+//            self.dimView.isHidden = true
+//        }
+//        
+//        self.startNewRound()
+//    }
     
     
 //    private func newRound() {
@@ -305,7 +310,7 @@ class PlayFieldViewController: UIViewController {
             
         } else {
             //Настоящий луз
-//            self.dimAndStopPlay(withRecord: <#T##Int#>)
+            self.performSegue(withIdentifier: "gameOverPresentDimViewControllerIdentifier", sender: self)
         }
     }
     
@@ -336,34 +341,24 @@ class PlayFieldViewController: UIViewController {
         }
     }
     
-    //Метод - место для программного создания и конфигурации views
-    private func setupViews() {
-        
-        //dimView init
-        dimView = UIView.init(frame: self.view.frame)
-        dimView.backgroundColor = .black
-        //Потом сильнее проясню цвет
-        dimView.alpha = 0.3
-        
-        //startButton init
-        startButton = UIButton.init()
-        startButton.frame.size = CGSize.init(width: dimView.frame.size.width * 0.74, height: 54)
-        startButton.center = dimView.center
-        startButton.setTitle("Старт!", for: .normal)
-        startButton.titleLabel!.font = startButton.titleLabel!.font.withSize(24)
-        startButton.backgroundColor = #colorLiteral(red: 0.9583352208, green: 0.8847941756, blue: 0.2802580595, alpha: 1)
-        startButton.alpha = 0.3
-        startButton.addTarget(self, action: #selector(self.startButtonTapped(sender:)), for: UIControlEvents.touchUpInside)
-        startButton.clipsToBounds = true
-        startButton.layer.cornerRadius = 8
-        
-    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier! {
-        case "presentModallyDimViewControllerIdentifier":
+        case "firstLaunchPresentDimViewControlletIdentifier":
             let dvc = segue.destination as! DimViewController
             dvc.primeViewController = self
+            dvc.context = .firstLaunch
+            
+        case "gameOverPresentDimViewControllerIdentifier":
+            let dvc = segue.destination as! DimViewController
+            dvc.primeViewController = self
+            dvc.context = DimViewController.Context.gameOver
+            
+        case "reloadPresentDimViewControllerIdentifier":
+            let dvc = segue.destination as! DimViewController
+            dvc.primeViewController = self
+            dvc.context = DimViewController.Context.reload
+            
         default:
             fatalError("промазал")
         }

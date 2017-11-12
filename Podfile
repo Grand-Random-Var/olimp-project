@@ -6,7 +6,7 @@ target 'swiftbook-olimp-project' do
   use_frameworks!
 
   # Pods for swiftbook-olimp-project
-#pod ‘RealmSwift’
+pod ‘RealmSwift’
 #pod ‘Firebase’
 #pod ‘Firebase/Database’
 #pod ‘SwiftyJSON’

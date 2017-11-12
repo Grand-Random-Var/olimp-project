@@ -15,14 +15,18 @@ extension RecordsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataManager.records.count
+        return 20
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "RecordTableViewCell", for: indexPath) as! RecordTableViewCell
+        print("хуй: \(dataManager.records.count)")
         
         let record = dataManager.records[indexPath.row]
         
+        cell.numberOfRecordLabel.text = "\(indexPath.row + 1)"
+        cell.nameLabel.text = "\(record.name)"
+        cell.nameLabel.text = "\(record.value)"
         
         
         return cell

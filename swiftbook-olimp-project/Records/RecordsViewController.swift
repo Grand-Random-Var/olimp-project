@@ -11,11 +11,13 @@ import UIKit
 
 class RecordsViewController: UIViewController {
     
-//    let dataManager = DataManager.shared
+    @IBOutlet weak var tableView: UITableView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableView.tableFooterView = UIView.init(frame: CGRect.zero)
         
         
     }
